@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css props</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* one : thin red rounded border, bigger font*/
+      #one {
+        border: 1px solid red;
+        border-radius: 6px;
+        font-size: 1.4em;
+      }
+
+      /* two: bold italic font */
+      #two {
+        font-style: italic;
+        font-weight: bold;
+      }
+
+      /* three: shadow around, black bg, white mono-space (family) font,  */
+      #three {
+        text-shadow: 1px 1px 1px black;
+        background-color: black;
+        color: white;
+        font-family: "Space Mono", monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="one">Hello World</div>
+    <div id="two">Hello World</div>
+    <div id="three">Hello World</div>
+  </body>
+</html>
