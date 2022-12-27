@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Buttons</title>
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px auto;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #1b3fcc;
+        color: #fff;
+        font-family: 'Roboto', sans-serif;
+        display: block;
+        margin: auto;
+      }
+      div {
+        margin-top: 4px;
+        width: 400px;
+        height: 100px;
+      }
+      h1 {
+        margin-top: 10px;
+        text-align: center;
+      }
+      button {
+        margin-top: 10px;
+        display: block;
+        padding: 10px 10px;
+        font-size: 18px;
+        color: #fff;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: light;
+        cursor: pointer;
+        border: none;
+      }
+      .btn--register {
+        margin-left: 50px;
+        float: left;
+      }
+      .btn--submit {
+        margin-right: 50px;
+        float: right;
+      }
+      .btn--round button {
+        border-radius: 25px;
+      }
+      .btn--fill .btn--register {
+        background-color: rgb(22, 96, 255);
+      }
+      .btn--fill .btn--register:hover {
+        background-color: rgb(0, 47, 149);
+      }
+      .btn--fill .btn--submit {
+        background-color: rgb(255, 197, 71);
+        font-size: 13px;
+      }
+      .btn--fill .btn--submit:hover {
+        background-color: rgb(181, 124, 0);
+      }
+      .btn--round .btn--register {
+        background-color: rgb(4, 172, 107);
+      }
+      .btn--round .btn--register:hover {
+        background-color: rgb(2, 82, 51);
+      }
+      .btn--round .btn--submit {
+        background-color: rgb(246, 63, 234);
+        font-size: 13px;
+      }
+      .btn--round .btn--submit:hover {
+        background-color: rgb(150, 3, 140);
+        font-size: 13px;
+      }
+      .btn--ghost button {
+        background-color: transparent;
+      }
+      .btn--ghost .btn--register {
+        background-color: transparent;
+        border: 2px solid rgb(226, 72, 1);
+      }
+      .btn--ghost .btn--register:hover {
+        background-color: rgb(226, 72, 1);
+      }
+      .btn--ghost .btn--submit {
+        border: 2px solid rgb(131, 40, 236);
+        font-size: 13px;
+      }
+      .btn--ghost .btn--submit:hover {
+        background-color: rgb(131, 40, 236);
+      }
+
+      #ghostround-reg {
+        background-color: transparent;
+        border: 2px solid rgb(255, 202, 45);
+      }
+      #ghostround-reg:hover {
+        background-color: rgb(255, 209, 45);
+      }
+      .btn--ghost #ghostround-sub {
+        background-color: transparent;
+        border: 2px solid rgb(25, 173, 153);
+        font-size: 13px;
+      }
+      .btn--ghost #ghostround-sub:hover {
+        background-color: rgb(25, 173, 153);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Flat</h1>
+    <div class="btn--fill">
+      <button class="btn--register">Register</button>
+      <button class="btn--submit">Submit</button>
+    </div>
+    <h1>Round</h1>
+    <div class="btn--round">
+      <button class="btn--register">Register</button>
+      <button class="btn--submit">Submit</button>
+    </div>
+    <h1>Flat Ghost</h1>
+    <div class="btn--ghost">
+      <button class="btn--register">Register</button>
+      <button class="btn--submit">Submit</button>
+    </div>
+    <h1>Round Ghost</h1>
+    <div class="btn--round">
+      <div class="btn--ghost">
+        <button class="btn--register" id="ghostround-reg">Register</button>
+        <button class="btn--submit" id="ghostround-sub">Submit</button>
+      </div>
+    </div>
+  </body>
+</html>
