@@ -44,13 +44,13 @@
             box-shadow: 0.2rem 0.2rem 0.2rem rgb(52, 84, 67);
         }
         section{
-                        text-shadow: 0.2rem 0.2rem 0.2rem black;
+            text-shadow: 0.2rem 0.2rem 0.2rem black;
             padding: 10px;
             background-color: rgba(5, 72, 36, 0.444);
             color: #fac22a;
             border-radius: 10px;
             font-size: 1.3em;
-            margin-bottom: 5px;
+            margin: 15px;
         }
         button {
             color:red; 
@@ -63,22 +63,25 @@
             font-weight: bold; 
             font-family: 'Playball', cursive;              
         }
-        #some-more-info{
-            width:fit-content;
+        #div--aside{
+            min-width:900px;
         }
-       
+        #some-more-info{
+            max-width: 400px;
+            margin: 0 20px;
+        }
         #img--aside--anim1{
             float: left;
             border:red solid 5px;
-            margin: 80px 17px;            
-            width:150px; 
+            margin: 80px 20px;            
+            width:170px; 
             height:200px;
             border-radius:10%;
         }
         #img--aside--anim2{
             float: right;
-            margin: 80px 17px;
-            width:150px; 
+            margin: 80px 20px;
+            width:180px; 
             height:200px;
             border-radius:10%;
             border:red solid 5px;
@@ -91,6 +94,7 @@
             line-height: 1px;
         }
     </style>
+   
     <body>
     <center>
     <header id="header">
@@ -133,13 +137,12 @@
             </button>
             <img src="/images/swords.png" width="23px"/>        
         </section>
-    
+            
             <div id="div--aside">
                 <img id="img--aside--anim1" src="/images/inigo-anime.jpg"/>
           
                 <img id="img--aside--anim2" src="/images/inigo3.jpg"/>
-            </div>
-        <section id="some-more-info">
+            <section id="some-more-info">
             <nav>
                 <ul style="list-style: none">
                     <h3>A little more about myself:</h3>
@@ -159,7 +162,8 @@
                 </ul>
             </nav>
         </section>
-        
+      </div>
+
     </main>
     </center>
     </body>
