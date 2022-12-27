@@ -4,28 +4,113 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Inigo's Profile Pag  e</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Caramel&family=Playball&display=swap" rel="stylesheet">
+        <title>Inigo's Profile Page</title>
     </head>
+    <style>
+        body{
+                background-color: #58e29bda;
+                color: rgb(87, 1, 1);
+                font-family: 'Playball', cursive;              
+                font-size: 17px;
+                letter-spacing: 0.1rem;
+
+        }
+        #header{
+            background-image: url("/images/landscape.jpg");
+            background-size: cover;
+            color:#ff0000;
+            font-weight: bold;
+            font-family: 'Caramel', cursive;
+            font-size: 30px;
+            text-shadow: 0.2rem 0.2rem 0.2rem black;
+            border-radius: 10px;
+        }
+        #main-about{
+
+            font-size:1.8em;
+
+
+        }
+        #profile-img{
+            margin-top: 5px;
+            margin-bottom: 5px;
+            border-radius: 50%; 
+            border:red solid 5px;
+            width: "200px"; 
+            height: "200px";
+            box-shadow: 0.2rem 0.2rem 0.2rem rgb(52, 84, 67);
+        }
+        section{
+                        text-shadow: 0.2rem 0.2rem 0.2rem black;
+            padding: 10px;
+            background-color: rgba(5, 72, 36, 0.444);
+            color: #fac22a;
+            border-radius: 10px;
+            font-size: 1.3em;
+            margin-bottom: 5px;
+        }
+        button {
+            color:red; 
+            background-color: black;
+            border-radius: 20px; 
+            border: 3px solid red; 
+            padding: 10px 20px; 
+            font-size: 25px; 
+            letter-spacing: 3px;
+            font-weight: bold; 
+            font-family: 'Playball', cursive;              
+        }
+        #some-more-info{
+            width:fit-content;
+        }
+       
+        #img--aside--anim1{
+            float: left;
+            border:red solid 5px;
+            margin: 80px 17px;            
+            width:150px; 
+            height:200px;
+            border-radius:10%;
+        }
+        #img--aside--anim2{
+            float: right;
+            margin: 80px 17px;
+            width:150px; 
+            height:200px;
+            border-radius:10%;
+            border:red solid 5px;
+        }
+        a:hover{
+            color: #ff0000;
+            text-decoration: none;
+        }
+        li{
+            line-height: 1px;
+        }
+    </style>
     <body>
     <center>
     <header id="header">
             <h1>
                 My name is <b>Inigo Montoya</b>
             </h1>
-            <img src="/html_markup/images/Inigo.jpg" width="200px" height="200px" 
-                style="border-radius: 50%; border:red solid 5px"/>
+            <img id="profile-img" src="/images/Inigo.jpg" />
             <h2>
                 <u><b>You</u></b> killed my father. 
                 <b><i>Prepare to die!</i></b>
             </h2>
     </header>
     <main class="main">
+        </div>
         <section id="main-about">
                 <h3>
-                    I am a swordsman who seeks to kill a mysterious six-fingered man, 
-                    who killed my father.
+                    I am a swordsman who seeks to kill<br>a mysterious six-fingered man,                    who killed my father.
                 </h3>
         </section>
+        
         <section id="main-contact">
                 <h3>
                     <b>You can find me at social media right 
@@ -42,37 +127,38 @@
                     <br><br>
                     <b>(...and in that case - I'll cut your throat.)</b>
                 </p>
-            <img src="/html_markup/images/swords.png" width="23px"/>
-            <button style="color:red; background-color: black; 
-                            border-radius: 20%; border: 3px solid red; padding:15px; 
-                            font-size: 16px; font-weight: bold;" 
-                    onclick="alert('...Gently')">Stab!
+            <img src="/images/swords.png" width="23px"/>
+            <button>
+                Stab!
             </button>
-            <img src="/html_markup/images/swords.png" width="23px"/>
-        </section>
-        <br>
-        <hr>
-        <br>
-        <aside id="some-more-info">
+            <img src="/images/swords.png" width="23px"/>        </section>
+    
+            <div id="div--aside">
+                <img id="img--aside--anim1" src="/images/inigo-anime.jpg"/>
+          
+                <img id="img--aside--anim2" src="/images/inigo3.jpg"/>
+            </div>
+        <section id="some-more-info">
             <nav>
                 <ul style="list-style: none;">
                     <h3>A little more about myself:</h3>
                     <li>
+                        <img src="/images/Fezzik.jpeg" width="80px" height="80px" style="border-radius:30%"/>
                         <p>
                             My best friend is a giant called Fezzik
-                            <img src="/html_markup/images/Fezzik.jpeg" width="50px" height="50px" style="border-radius:30%"/>
                         </p>
+                        <br>
                     </li>
                     <li>
-              git remote add origin /cygdrive/s/shareddir/source.git
-          <p>
+                        <img src="/images/Vizzini.jpeg" width="80px" height="80px" style="border-radius:30%"/>
+                        <p>
                             Our boss is a criminal named Vizzini
-                        <img src="/html_markup/images/Vizzini.jpeg" width="50px" height="50px" style="border-radius:30%"/>
                         </p>
                     </li>
                 </ul>
             </nav>
-        </aside>
+        </section>
+        
     </main>
     </center>
     </body>
@@ -80,6 +166,6 @@
         <br><br><br>
         <hr>
     </footer>
-        <p> &copy;1987 The Princess Bride   </p>
+        <p> &copy; 1987 The Princess Bride   </p>
     </footer>
     </html>
