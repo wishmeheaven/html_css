@@ -1,3 +1,5 @@
+@import url('path/to/font-awesome/css/font-awesome.min.css');
+
 /* Reset */
 * {
     margin:0;
@@ -69,8 +71,8 @@ p {
     color: #333;
 }
 .bg-primary {
-    background: #333;
-    color: #f7c08a;
+    background:#f7c08a ;
+    color: #333;
 }
 
 /* Navbar */
@@ -135,7 +137,7 @@ p {
 #home-info .info-img{
     float: left;
     width: 50%;
-    background: url('../img/photo-1.jpg');
+    background: url('../img/photo-1.jpg') no-repeat;
     min-height: 100%;
 }
 
@@ -150,4 +152,16 @@ p {
 
 #home-info .info-content p {
     padding-bottom: 30px;
+}
+
+/* Features */
+.box {
+    float: left;
+    width: 33.3%;
+    padding: 50px;
+    text-align: center;
+}
+
+.box i {
+    margin-bottom: 10px;
 }
