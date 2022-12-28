@@ -49,6 +49,16 @@ p {
     cursor: pointer;
 }
 
+.btn:hover {
+    background: #444;background: #f7c08a;
+    color:#333;
+}
+
+.btn-light {
+    background: #f4f4f4;
+    color: #333;
+}
+
 /* Navbar */
 #navbar{
     background: #333;
@@ -89,7 +99,7 @@ p {
 
 /* Showcase */
 #showcase {
-    background: url('../img/showcase.jpeg') no-repeat center center/cover;
+    background: url('../img/showcase.jpg') no-repeat center center/cover;
     height: 600px;
 }
 
@@ -103,3 +113,24 @@ p {
     font-size: 60px;
     line-height: 1.2em;
 }
+
+#home-info {
+    height: 400px;
+}
+
+#home-info .info-img{
+    float: left;
+    width: 50%;
+    background: url('../img/photo-1.jpg');
+    min-height: 100%;
+}
+
+#home-info .info-content {
+    float: right;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    padding: 50px 30px;
+    overflow: hidden;
+}
+
