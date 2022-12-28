@@ -4,37 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Position1</title>
+    <title>Position2</title>
     <style>
-        #outer{
+        .outer{
             display: block;
             margin: 100px auto;
-           width:135px;
-           height:135px;
-           background-color:rgb(28, 118, 128);
-           position: relative;
+            width:135px;
+            height:135px;
+            background-color:rgb(28, 118, 128);
+            position: relative;
         }
-        #inner{
+        .inner{
             width:62px;
             height:62px;
             background-color:rgb(112, 252, 206);
             position: absolute;
             top: 14px;
-            left: 0;
-           
+            left: 14px;
         }
     </style>
 </head>
 <body>
-    <div id="outer">
-        <div id="inner">
+    <div class="outer">
+        <div class="inner">
         </div>
     </div>
 </body>
 </html>
-
-<!--             
-        == Answer ==
-       1. The problem is that the outer div is lacking of a relative position
-       which directly affects  the inner div absolute position.
- -->
