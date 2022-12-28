@@ -165,3 +165,15 @@ p {
 .box i {
     margin-bottom: 10px;
 }
+.clr{
+    clear: both;
+}
+/* Footer */
+#main-footer {
+    text-align: center;
+    background-color: #444;
+    color: #fff;
+    padding: 20px;
+}
+
+
