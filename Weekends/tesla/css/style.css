@@ -1,3 +1,5 @@
+@import url("path/to/font-awesome/css/font-awesome.min.css");
+
 * {
   margin: 0;
   padding: 0;
@@ -5,10 +7,116 @@
 }
 
 body {
-  font-family: "Gotham SSm", sans-serif;
+  width: 100%;
   background: url(../img/Model-3-Main.jpg) no-repeat center center/cover;
-  /* background-color: red; */
+  font: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* line-height: 1.7em; */
 }
+
+/* header {
+    background-color: rgba(0, 0, 0, 0.45);
+    text-align: center;
+    color: white;
+    font-family:  "Fira Code", SFMono-Regular, Consolas;
+    position: relative;
+    top: 50%;
+  } 
+   */
+
+header {
+  display: inline-block;
+  width: 100%;
+  height: 50px;
+  /* text-align: center; */
+  /* color: white; */
+  font-size: 13px;
+ overflow: hidden;
+}
+
+#topnav-left {
+  width: 20%;
+  /* height: 100%; */
+  float: left;
+  height: 100%;
+  min-width: 20%;
+}
+
+#logo{
+    max-width: 70%;
+    margin-top: 13px;
+    margin-left: 20px;
+    width: 100px;
+    height: 100px;
+}
+/* .container{
+    padding: 10px;
+    display: inline-block;
+} */
+
+ul, ol {
+    list-style: none;
+}
+
+#topnav-center {
+    float: right;
+  /* margin-right: 50px; */
+  top: 0;
+  height: 100%;
+  width: 60%;
+  min-width: 60%;
+}
+
+#topnav-center ol {
+  width: 100%;
+  padding-right: 100px;
+  /* float: right; */
+  min-width: 100%;
+}
+
+#topnav-center ol li {
+  float: left;
+  padding: 10px;
+  padding-left: 30px;
+}
+
+#topnav-right {
+  top: 0;
+  height: 100%;
+  float: right;
+  width: 20%;
+  height: 100%;
+  /* min-width: 20%; */
+}
+
+#topnav-right ul {
+  /* float: right; */
+  padding-right: 30px;
+  width: 100%;
+  /* min-width: 80%; */
+}
+#topnav-right ul li{
+  list-style: none;
+  float: right;
+  padding: 10px;
+  padding-right: 0;
+}
+
+.clr {
+  clear: both;
+}
+
+div {
+  border: 1px solid rgb(198, 167, 46);
+}
+
+.model{
+    display: block;
+    margin: 50px auto;
+
+
+}
+
 
 /* Utilities*/
 
@@ -28,3 +136,15 @@ bg-light {
 bg-dark {
   background-color: #000;
 }
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/*
+font-weight--book: 400;
+font-weight--light: 300;
+font-weight--medium: 500;
+font-weight--xlight: 200;
+*/
