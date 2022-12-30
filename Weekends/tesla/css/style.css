@@ -1,5 +1,30 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Gotham SSm", sans-serif;
+  background: url(../img/Model-3-Main.jpg) no-repeat center center/cover;
+  /* background-color: red; */
+}
+
+/* Utilities*/
+
+/*fonts*/
+f-light {
+  color: #fff;
+}
+f-dark {
+  color: #000;
+}
+
+/*backgound*/
+bg-light {
+  background-color: #fff;
+}
+
+bg-dark {
+  background-color: #000;
 }
