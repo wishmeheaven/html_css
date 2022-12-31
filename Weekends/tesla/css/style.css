@@ -6,13 +6,16 @@
   box-sizing: border-box;
 }
 
+html{
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+}
 
 body .section-one {
     width: 100%;   
     background: url(../img/Model-3-Main.jpg) no-repeat center center/cover;
   /* max-width: 1100px; */
   font: #fff;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   /* line-height: 1.7em; */
 }
 
@@ -81,10 +84,6 @@ header #topnav-center {
   float: right;
 }
 
-a {
-  border: 1px solid rgb(198, 167, 46);
-}
-
 header #topnav-right {
   height: 100%;
   float: right;
@@ -102,12 +101,13 @@ div {
 .model {
   border: 1px solid rgb(198, 167, 46);
   width: 100%;
-  margin: 90px auto;
+  margin: 50px auto;
 }
 
 .model .container {
   width: fit-content;
   margin: auto;
+  margin-bottom: 250px;
 }
 .container h1 {
   color: #fff;
@@ -119,21 +119,24 @@ div {
 }
 
 #sidenav {
-  display: block;
-  position: relative;
+  /* display: block;
+  position: relative; */
   border: 2px solid blue;
   width: 50px;
   height: fit-content;
   background-color: rgba(0, 0, 0, 0.45);
   left: 10px;
   z-index: 1;
-  position: absolute;
+  float: left;
+  position: sticky;
+  top: 0;
   /* display:none */
 }
 
 .sideline {
-  /* position: absolute; */
-  /* float: left; */
+top: 0;
+  position:sticky;
+  float: left;
   width: 3px;
   margin-left: 10px;
   margin-top: 2px;
@@ -152,11 +155,11 @@ div {
   background-color: red;
 }
 
-.model-specs {
+.section-one .model-specs {
   border: 1px solid rgb(46, 170, 198);
+  bottom: 0;
   width: 500px;
   margin: auto;
-  margin-top: 400px;
   color: #fff;
   text-align: center;
 }
@@ -274,6 +277,8 @@ a {
   text-decoration: none;
   color: #fff;
 }
+
+
 
 /*
 font-weight--book: 400;
