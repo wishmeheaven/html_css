@@ -114,7 +114,7 @@ div {
     border: 3px red solid;
     display: block;
     width: 100%;
-    margin-top: 50px;
+    margin-top: 30px;
     /* margin-left: 500px; */
     /* margin-right: 900px; */
 }
@@ -130,6 +130,41 @@ div {
 }
 .container p{
     font-size: 12px;
+}
+
+#sidenav {
+    display: block;
+    position: relative;
+    border: 2px solid blue;
+    width: 150px;
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 0.45);
+    left: 10px;
+    z-index: 1;
+    position: absolute;
+    /* display:none */
+}
+
+.sideline{
+    /* position: absolute; */
+    /* float: left; */
+    width: 3px;
+    height: px;
+    margin-left: 10px;
+    margin-top: 2px;
+} 
+
+.nav-content li {
+    width: 20px;
+    margin-top: 3px;
+    margin-left: 10px;
+}
+
+#sidenav .container .nav-content .sideline:hover{
+    cursor: pointer;
+    margin-left: 10px;
+    visibility: visible;
+    background-color: red;
 }
 
 
