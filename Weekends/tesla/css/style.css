@@ -15,14 +15,14 @@ body #section-one {
     border: 2px solid rgb(47, 50, 225);
     width: 100%;   
     background: url(../img/Model-3-Main.jpg) no-repeat center center/cover;
-        height: 100vh;
+    height: 100vh;
   /* max-width: 1100px; */
    font: #fff;
   /* line-height: 1.7em; */
 }
 
 #section-one, .section-two, .section-three {
-    height: 500px;
+    /* height: 500px; */
     /* background-color: #000; */
 }
 
@@ -39,12 +39,12 @@ header {
 .container #logo {
   border: 1px solid red;
   padding: 0 2px;
-  margin: 10px 20px;
+  margin: 20px 40px;
 }
 #logo {
   float: left;
-  width: 100px;
-  line-height: 2em;
+  width: 150px;
+  padding: 50px;
 }
 
 ul,
@@ -57,18 +57,27 @@ header #topnav-center {
   border: 1px solid rgb(198, 167, 46);
   float: right;
   height: 100%;
-  width: 40%;
+  width: 50%;
 }
 
 .nav-content {
+  border: 1px solid rgb(198, 46, 46);
   width: 100%;
   height: 100%;
-  padding: 8px;
+  padding: 5px;
+  margin-left: 10px;
+  font-size: 1.3em;
 }
+
 .nav-content li {
   border: 1px solid rgb(198, 167, 46);
   padding: 5px 8px;
-  margin: 0 0px;
+  margin: 0 3px;
+  padding: 10px;
+
+}
+.nav-content li:hover {
+background-color: gray;  
 }
 
 #topnav-center .nav-content li {
@@ -151,42 +160,46 @@ top: 0;
 }
 
 #section-one .model-specs {
-  display: block;
+  position: inline-block;
   border: 2px solid rgb(198, 46, 195);
-  width: 500px;
-  margin: auto;
+  height: 60px;
+  width: 70%;
   color: #fff;
-  text-align: center;
-  margin-bottom: 0;
+  margin: 310px auto;
+  /* overflow: hidden; */
+  min-width: 55%;
 }
 
 .model-specs ul {
-  float: left;
-  height: 40px;
+  display: inline-block;
+  height: 70px;
   width: 100%;
-  border: 3px solid rgb(99, 46, 198);
-  color: #fff;
+  height: 100%;
+    min-width: 100%;
+    overflow: hidden;
 }
-.model-specs ul li {
+.model-specs .spec-item {
   float: left;
-  border: 1px solid rgb(46, 198, 129);
-  color: #fff;
-  margin-left: 50px
+  border: 1px solid rgb(255, 157, 0);
+  /* margin-left: 30px; */
+  /* padding: 0 40px; */
+  width: 20%;
+  margin: 0 5px;
+  text-align: center;
+  height: 100%;
 }
-.model-specs ul h2 {
+
+.model-specs h2 p{
   border: 1px solid rgb(46, 198, 129);
-  color: #fff;
-  font-size: 15px;
+  font-size: 1.7em; 
 }
-.model-specs ul p {
-  border: 1px solid rgb(46, 198, 129);
-  color: #fff;
-  font-size: 7px;
-  
+.model-specs p {
+  font-size: 0.8em;
+  line-height: 10px;
 }
 
 /* current-color{
-    color: #fff;
+
 } */
 
 
@@ -221,11 +234,15 @@ top: 0;
 
 
 #box-buy {
-  border: 2px solid #fff;
+    text-align: center;
+  border:3px solid #fff;
+  border-radius: 4px;
   height: 80%;
-  width: 150px;
+  width: 25%;
   float: right;
-  margin: 3px;
+  margin: 8px;
+  margin-right: 50px;
+  padding: 5px 20px;
   cursor: pointer;
 }
 
@@ -237,15 +254,12 @@ top: 0;
 #box-buy .btn-buy p{
   border: 1px solid rgb(255, 50, 64);
   font-weight: bold;
-  font-size: 10px;
+  font-size: 1em;
   background-color: rgba(0, 255, 170, 0);
 }
+
 /* Utilities*/
-f-light {
-  
-}
-f-dark {
-}
+
 
 /*backgound*/
 .bg-light:hover {
@@ -282,34 +296,62 @@ font-weight--light: 300;
 font-weight--medium: 500;
 font-weight--xlight: 200;
 */
+      #section-two{        
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            border: 3px solid rgb(0, 136, 255);
+        }
 
-.section-border{
-    display: block;
-    margin-top: 50px;
-    background-color: purple;
-    height: 50px;
-}
+        .saftey-img {
+            position: absolute;
+            background: url(../img/model-3-shield.jpg) no-repeat center center/cover;
+            width:60%;
+            height: 100vh;
+            min-width:60%;
+        }
 
-body .section-two{
-    width: 100%;   
-    background: url(../img/Model-3-Main.jpg) no-repeat center center/cover;
-    font: #fff;
-    height: 720px;
-  /* line-height: 1.7em; */
-}
-#section-two{
-    background: url(../img/model-3-shield.jpg) no-repeat center center/cover;
-    height: fit-content;
-}
+        .saftey-aside {
+            position: absolute;
+            height: 100vh;
+            width: 30%;
+            min-width: 30%;
+        }
 
-#section-two .safety{    
-    border: 2px solid rgb(198, 5, 85);
-    display: block;
-    width: 300px;
-}
+        .safety-aside .header {
+           position: absolute;
+            width: 30vw;
+            border: 1px solid rgb(255, 0, 225);
+            right: 0;
+            top: 5vh;
+            font-size: 1em;
+            min-width: 30%;
+        }
+        
+        .safety-aside .main {
+            position: absolute;
+            width: 30vw;
+            height: 70%;
+            border: 1px solid rgb(255, 0, 225);
+            right: 0;
+            top: 15vh;
+            min-width: 30%;
 
-
-#section-three{
-    display: block;
-    background: url(../img/Model-3-Performance.jpg) no-repeat center center/cover;
-}
+        }
+        .safety-aside h1 {
+            top:3vh;
+            font-weight: 500;
+            font-size: 1.5em;
+        }
+        .safety-aside h4 {
+            top:1;
+            left:0;
+        }
+        .safety-aside p {
+            font-size: 0.7em;
+            top:3vh;
+        }
+        .safety-aside span {
+            font-size: 0.8em;
+            top:3vh;
+        }
