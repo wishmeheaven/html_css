@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+html{
+  font-family: 'roboto', sans-serif;
+}
+
 #section-one {
     position: relative;
     display: block;
@@ -25,7 +29,7 @@ header {
   border: 1px solid rgb(198, 167, 46);
   width: 100%;
   min-width: 80%;
-  height: 6%;
+  height: 10%;
   overflow: hidden;
 }
 
@@ -155,33 +159,34 @@ top: 0;
 }
 
 #section-one .model-specs {
+  /* display: absolute; */
   border: 2px solid rgb(198, 46, 195);
   height: 60px;
-  width: 70%;
   color: #fff;
-  margin: 230px auto;
-  min-width: max-content;
+  margin: 50px auto;
+  /* min-width: max-content; */
   /* overflow: hidden; */
 }
 
 .model-specs .container {
-  float:left;
+  margin: 0 auto;
   height: 100%;
-  width: 70%;
+  width: 100%;
   overflow: hidden;
-  margin-left: 300px;
+  /* margin-left: 300px; */
 }
 
 .model-specs ul {
-  float:right;
-  width: 100%;
-  min-width: none;
-  overflow: hidden;
+  border: 1px solid rgb(255, 157, 0);
+  margin-left: 200px;
+  height: 100%;
+  width: 75%;
+  /* padding: 0 200px; */
+  /* min-width: none; */
 }
 .model-specs .spec-item {
   float: left;
-  border: 1px solid rgb(255, 157, 0);
-  margin: 0 40px;
+  margin: 0 50px;
   text-align: center;
 }
 
@@ -229,16 +234,15 @@ top: 0;
 */
 
 
-#box-buy {
+ .model-specs .box-buy {
   text-align: center;
   border:3px solid #fff;
   border-radius: 4px;
-  width: 25%;
+  width: 20%;
   float: left;
-  margin: 5px;
-  margin-right: 50px;
-  padding: 10px;
+  margin: 10px;
   cursor: pointer;
+  font-weight: bold;
 }
 
 /* #box-buy .btn-buy{
@@ -246,11 +250,12 @@ top: 0;
   font-size: 7px;
 } */
 
-#box-buy .btn-buy p{
+.box-buy .btn-buy p{
   border: 1px solid rgb(255, 50, 64);
   font-weight: bold;
   font-size: 1em;
-  background-color: rgba(0, 255, 170, 0);
+  padding: 10px 10px;
+  background-color: transparent;
 }
 
 /* Utilities*/
@@ -313,10 +318,10 @@ font-weight--xlight: 200;
 
         .safety-aside {        
             float: right;
-            border: 10px solid rgb(13, 255, 0);
+            border: 1px solid rgb(13, 255, 0);
             width: 30%;
             height: 720px;
-            padding: 30px;
+            padding: 30px 5px;
         }
 
         .safety-aside .header {
@@ -324,52 +329,70 @@ font-weight--xlight: 200;
             border: 1px solid rgb(255, 0, 225);            
             font-size: 1.5em;
             width: 100%;
-            height: 20%;
-            
+            height: 15%;            
         }
         
         .safety-aside .header h4 {    
             top:1;
             left:0;
+            font-size: 0.8em;
+            font-weight: 100;
         }
         .safety-aside .header h2 {
             top:1;
             left:0;
-            font-weight: 500;
-            font-size: 1.5em;
+            font-weight: bold;
+            font-size: 1em;
         }
         
         
         .safety-aside .main {
             float: left;
             width: 100%;      
-            height: 100%;      
+            height: 70%;      
             border: 1px solid rgb(255, 0, 225);    
-            min-width: 30%;
+            
         }
         .safety-aside p {
-            font-size: 1em;
+            font-size: 0.9em;
             top:3vh;
         }
         .safety-aside span {
             font-size: 1em;
-            top:3vh;
+            /* top:3vh; */
         }
 
-        .safety-aside .footer{ 
-          /* float: right; */
-          width: 30%;
-          height: 100%;
+         .footer{           
+          margin-top:30px;          
+          border: 1px solid rgb(255, 0, 225);    
+          background-color: aqua;          
+          width: 100%;
+          height: 15%;  
         }
-        .safety-aside .footer .btn-box{
-          float:right;  
-          width: 50%;  
-          height: 100%;
+         .safety-aside .footer .box-learn{
+            float:left;
+            padding:20px;
+            border: 1px solid rgb(255, 0, 225);    
+            width: 40%;
         }
+         .safety-aside .footer .box-buy{
+            float:right;
+            padding:10px;
+            border: 1px solid rgb(255, 0, 225);    
+            width: 40%;            
+        }
+          .safety-aside .btn-buy{          
+          border: 1px solid rgb(255, 0, 225); 
+          text-align: center;
+          border:3px solid rgb(0, 0, 0);
+          border-radius: 4px;
+          padding: 8px;
+          font-weight: bold;
+          ;
 
-          .safety-aside .footer .btn-learn{
-          float: left;          
-          width: 50%;
-          height: 100%;
+          cursor: pointer;                               
+          }
+          .btn-learn{
+          border: 1px solid rgb(255, 0, 225);    
           }
 
