@@ -16,6 +16,7 @@
                 font-family: 'Playball', cursive;              
                 font-size: 17px;
                 letter-spacing: 0.1rem;
+                margin: 0 auto;   
         }
         #header{
             margin: 10px 20px;
@@ -30,16 +31,13 @@
             border-radius: 10px;
         }
         #main-about{
-
             font-size:1.8em;
-
-
         }
         #profile-img{
             border-radius: 50%; 
             border:red solid 5px;
-            width: "200px"; 
-            height: "200px";
+            width: 200px; 
+            height: 200px;
             box-shadow: 0.2rem 0.2rem 0.2rem rgb(52, 84, 67);
         }
         section{
@@ -123,46 +121,69 @@
     /*=================== Media Queries ===================*/
       
        @media only screen and (max-width: 500px) {
-        .clr {
+           .clr {
         clear: both;
+      }
+      section, header{
+        min-width: 300px;
+        min-height: 400px;
+      }
+        .nav--ul li{     
+        display: block;    
+        margin: 5px;                  
+        }
+         #img--aside--anim1{
+            display: inline-block;
+            margin: 5px;
+        }
+        #img--aside--anim2{
+            display: inline-block;
+        margin: 5px;
+        }
+     }
+
+      @media(min-width: 501px) and (max-width: 768px)  {
+      section{
+        min-width: 500px;
+        height:400px;
+        min-height: 400px;
       }
         .nav--ul li{         
             display: block;
-            margin: 10px;            
-        }
-         #img--aside--anim1{
-           margin-left:10px;
-        }
-        #img--aside--anim2{
-            float: right;
-            margin: 80px 20px;
-            width:180px; 
-            height:200px;
-            border-radius:10%;
-            border:red solid 5px;
-        }
-            }
-
-      @media(min-width: 501px) and (max-width: 768px)  {
-         .nav--ul li{         
-            display: block;
-            margin: 10px;
+            margin: 5px;
         }
         #img--aside--anim1{
-           margin-left:10px;
-        }.clr {
+         margin: 5px 10px;  
+        margin: 5px;
+        }
+        #img--aside--anim2{
+                    display: inline;
+         margin: 5px 10px;  
+        }
+        .clr {
         clear: both;
-      }
       }
 
       @media(min-width: 769px) and (max-width: 1200px)  {
      #img--aside--anim1{
-           margin-left:10px;
-        }
+         margin: 5px 10px;  
+                   display: inline;
 
+        }
+     #img--aside--anim2{
+         margin: 5px 10px;  
+                   display: inline;
+
+        }
+        section{
+        width: 500px;
+        min-width: 500px;
+        height:400px;
+        min-height: 400px;
       }
-      
-      @media(min-width: 1201px)  {
+      }
+     @media(min-width: 1201px)  {
+
       }
 
      
@@ -187,7 +208,7 @@
                     I am a swordsman who seeks to kill<br>a mysterious six-fingered man,                    who killed my father.
                 </h3>
         </section>
-        
+    <div class="clr"></div>
         <section id="main-contact">
                 <h3>
                     <b>You can find me at social media right 
@@ -210,7 +231,8 @@
             </button>
             <img src="/images/swords.png" width="23px"/>        
         </section>
-            
+                <div class="clr"></div>
+
             <div id="div--aside">
                 <img id="img--aside--anim1" src="/images/inigo-anime.jpg"/>
                 <img id="img--aside--anim2" src="/images/inigo3.jpg"/>

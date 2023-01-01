@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Typography</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    div {
+      border: 2px solid black;
+      margin-top: 10px;
+    }
+
+    .width-viewport {
+      font-size: 3vw;
+      background-color: rgb(19, 93, 69);
+    }
+
+    .height-viewport {
+      font-size: 3vh;
+      background-color: aquamarine;
+    }
+    #unchanged .unchanged{
+        width: 100px;
+        min-width: max-content;
+        white-space: nowrap;
+    }
+
+  </style>
+  <body>
+      <div class="unchanged">
+            <h4 id="unchanged">This header doesn't change its size when the screen does</h4>
+        </div>
+    <div>
+      <p class="width-viewport">
+        p: 4vw - Relative to 1% of the width of the viewport
+      </p>
+    </div>
+    <div>
+      <p class="height-viewport">
+        p: 4vh - Relative to 1% of the width of the viewport
+      </p>
+    </div>
+    <div>
+      <h4 class="width-viewport">
+        h4: 4vw - Relative to 1% of the width of the viewport
+      </h4>
+    </div>
+    <div>
+      <h4 class="height-viewport">
+        h4: 4vh - Relative to 1% of the width of the viewport
+      </h4>
+    </div>
+    <div>
+      <h3 class="width-viewport">
+        h3: 4vw - Relative to 1% of the width of the viewport
+      </h3>
+    </div>
+    <div>
+      <h3 class="height-viewport">
+        h3: 4vh - Relative to 1% of the width of the viewport
+      </h3>
+    </div>
+    <div>
+      <h2 class="width-viewport">
+        h2: 4vw - Relative to 1% of the width of the viewport
+      </h2>
+    </div>
+    <div>
+      <h2 class="height-viewport">
+        h2: 4vh - Relative to 1% of the width of the viewport
+      </h2>
+    </div>
+    <div>
+      <h1 class="width-viewport">
+        h1: 4vw - Relative to 1% of the width of the viewport
+      </h1>
+    </div>
+    <div>
+      <h1 class="height-viewport">
+        h1: 4vh - Relative to 1% of the width of the viewport
+      </h1>
+    </div>
+  </body>
+</html>
