@@ -145,12 +145,6 @@ top: 0;
   margin-top: 2px;
 }
 
-/* .nav-content li {
-  width: 20px;
-  margin-top: 3px;
-  margin-left: 10px;
-} */
-
 #sidenav .container .nav-content .sideline:hover {
   cursor: pointer;
   margin-left: 10px;
@@ -159,31 +153,70 @@ top: 0;
 }
 
 #section-one .model-specs {
-  /* display: absolute; */
   border: 2px solid rgb(198, 46, 195);
-  height: 60px;
+  height: 70px;
   color: #fff;
   margin: 10px 300px;
-  /* min-width: max-content; */
-  /* overflow: hidden; */
 }
+      .model-specs .spec-item {
+        border: 3px solid rgb(198, 46, 46);
+        width: 20%;  
+        float: left;
+        margin: 5px;
+        text-align: center;
+      }
 
-.model-specs .container {
-  margin: 0 auto;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
+     .model-specs h2 {
+        font-size: 2em;
+        width: 100%;
+      }
+      
+     .model-specs p {
+        border: 1px solid rgb(0, 208, 255);
+        font-size: 0.9em;
+        line-height: 1.1em;
+      }
+
+      .model-specs .box-buy {
+        text-align: center;
+        border: 3px solid #fff;
+        border-radius: 4px;
+        width: 20%;
+        float: left;
+        margin: 10px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      .box-buy .btn-buy p {
+        border: 1px solid rgb(255, 50, 64);
+        font-weight: bold;
+        font-size: 1em;
+        padding: 10px 10px;
+        background-color: transparent;
+      }
+     
+
+      .model-specs {
+        float: left;
+        width: 75%;
+        min-width: 50%
+        border: 2px solid rgb(198, 46, 195);
+        height: 120px;
+        color: #fff;
+        margin: 340px auto 50px;
+        overflow: hidden;
+      }
+
   /* margin-left: 300px; */
-}
 
-.model-specs ul {
+/* .model-specs ul {
   border: 1px solid rgb(255, 157, 0);
   margin-left: 200px;
   height: 100%;
   width: 75%;
-  /* padding: 0 200px; */
-  /* min-width: none; */
-}
+} */
+/* 
 .model-specs .spec-item {
   float: left;
   margin: 0 50px;
@@ -197,7 +230,7 @@ top: 0;
 .model-specs p {
   font-size: 0.7em;
   line-height: 10px;
-}
+} */
 
 /* current-color{
 
@@ -362,7 +395,7 @@ font-weight--xlight: 200;
             /* top:3vh; */
         }
 
-         .footer{           
+         .footer{           `
           margin-top:30px;          
           border: 1px solid rgb(255, 0, 225);    
                    
@@ -397,3 +430,98 @@ font-weight--xlight: 200;
           border: 1px solid rgb(255, 0, 225);    
           }
 
+
+      #section-three {
+        position: relative;
+        margin: auto;
+        border: 2px solid rgb(47, 50, 225);
+        width: 100%;
+        background: url(./img/Model-3-Performance.jpg) no-repeat center
+          center/cover;
+        height: 500px;
+      }
+
+
+      #performance-info{   
+        /* display: inline-block; */
+        height: 200px;
+        margin:0 auto;      
+        height: 200px;
+        width: 55%;
+        border: 1px solid rgb(222, 192, 0);
+      }
+        .performance-aside{
+            float: left;
+            height: 200px;
+            width: 40%;
+            border: 1px solid rgb(222, 0, 15); 
+        }
+        #performance-info .header {  
+          height: 100px;
+          padding: 20px;
+          width: 30%;
+
+        }
+        #performance-info .header h4 {  
+            width: 30%;
+            font-size: 1.2em;
+            font-weight: 100;
+        }
+        #performance-info .header h2 {
+            top: 40px;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+         #performance-info .main {              
+            margin-left: 20px;
+            margin-top: 30px;
+            padding: 15px;
+            width: 65%;
+            height: 70%;
+            font-size: 1.1rem;
+               
+        }
+         .performance-aside .footer{           
+            margin-top: 60px;
+            margin-left: -15px;
+            width: 110%;
+            height: 75%;
+            text-align: center;
+            border: 1px solid rgb(105, 197, 24);                               
+        }
+         #performance-info .footer .box-learn{
+            float:left;
+            padding-top:5px;
+            
+            width: 30%;   
+            height: 100%;                               
+            
+        }
+         .performance-aside .footer .box-buy{
+          float: right;
+            padding:5px;
+            width: 70%;    
+            height:100%;        
+        }
+          .performance-aside .btn-buy{          
+          border: 1px solid rgb(255, 0, 225); 
+          text-align: center;
+          border:3px solid rgb(0, 0, 0);
+          border-radius: 4px;
+          font-weight: bold;
+          padding:5px;
+          cursor: pointer;                               
+          }
+          #section-three .btn-learn{
+            padding:5px;
+           border: 1px solid rgb(255, 0, 225);    
+          }
+        
+        .performance-aside p {
+            font-size: 0.9em;
+            top:3vh;
+        }
+        .performance-aside span {
+            font-size: 1em;
+            /* top:3vh; */
+        }
