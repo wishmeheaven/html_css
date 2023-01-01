@@ -16,7 +16,6 @@
                 font-family: 'Playball', cursive;              
                 font-size: 17px;
                 letter-spacing: 0.1rem;
-                min-width:1000px;
         }
         #header{
             margin: 10px 20px;
@@ -44,6 +43,7 @@
             box-shadow: 0.2rem 0.2rem 0.2rem rgb(52, 84, 67);
         }
         section{
+            width: 50%;
             text-shadow: 0.2rem 0.2rem 0.2rem black;
             padding: 30px 10px;
             background-color: rgba(5, 72, 36, 0.444);
@@ -52,7 +52,7 @@
             font-size: 1.3em;
             margin: 15px;
         }
-        button {
+        button {        
             color:red; 
             background-color: black;
             border-radius: 20px; 
@@ -63,17 +63,15 @@
             font-weight: bold; 
             font-family: 'Playball', cursive;              
         }
-        #div--aside{
-            min-width:1100px;
-        }
-        #some-more-info{
-            max-width: 600px;
+       
+        #div--aside #some-more-info{
+            max-width: 50%;
             margin: 0 10px;
         }
         #img--aside--anim1{
             float: left;
             border:red solid 5px;
-            margin: 80px 20px;            
+            margin: 80px 20px;         
             width:170px; 
             height:200px;
             border-radius:10%;
@@ -95,11 +93,12 @@
         }
         
         .nav--ul li{
-            display: inline; 
+            display: inline-block; 
             list-style-type: none;
             margin: 20px;
         }
         .btn--nav{
+            /* display: inline-block; */
             background-color: aliceblue;
             cursor: pointer;
             border: 4px solid red
@@ -120,7 +119,53 @@
             margin-left: 17px;
             background-color: #fab52a25;
         }
-        
+    
+    /*=================== Media Queries ===================*/
+      
+       @media only screen and (max-width: 500px) {
+        .clr {
+        clear: both;
+      }
+        .nav--ul li{         
+            display: block;
+            margin: 10px;            
+        }
+         #img--aside--anim1{
+           margin-left:10px;
+        }
+        #img--aside--anim2{
+            float: right;
+            margin: 80px 20px;
+            width:180px; 
+            height:200px;
+            border-radius:10%;
+            border:red solid 5px;
+        }
+            }
+
+      @media(min-width: 501px) and (max-width: 768px)  {
+         .nav--ul li{         
+            display: block;
+            margin: 10px;
+        }
+        #img--aside--anim1{
+           margin-left:10px;
+        }.clr {
+        clear: both;
+      }
+      }
+
+      @media(min-width: 769px) and (max-width: 1200px)  {
+     #img--aside--anim1{
+           margin-left:10px;
+        }
+
+      }
+      
+      @media(min-width: 1201px)  {
+      }
+
+     
     </style>
    
     <body>
@@ -168,8 +213,9 @@
             
             <div id="div--aside">
                 <img id="img--aside--anim1" src="/images/inigo-anime.jpg"/>
-          
                 <img id="img--aside--anim2" src="/images/inigo3.jpg"/>
+                                <div class="clr"></div>
+
             <section id="some-more-info">
                 <ul style="list-style: none">
                     <h3>A little more about myself:</h3>
