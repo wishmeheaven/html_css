@@ -163,12 +163,13 @@ top: 0;
   border: 2px solid rgb(198, 46, 195);
   height: 60px;
   color: #fff;
-  margin: 50px auto;
+  margin: 10px 300px;
   /* min-width: max-content; */
   /* overflow: hidden; */
 }
 
 .model-specs .container {
+  margin: 0 auto;
   height: 100%;
   width: 100%;
   overflow: hidden;

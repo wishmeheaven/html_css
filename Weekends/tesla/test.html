@@ -29,7 +29,7 @@
         border: 2px solid rgb(198, 46, 195);
         height: 120px;
         color: #fff;
-        margin: 340px auto;
+        margin: 340px auto 50px;
         overflow: hidden;
       }
 
@@ -73,66 +73,59 @@
         padding: 10px 10px;
         background-color: transparent;
       }
-      
-        .performance-aside {        
-            border: 1px solid rgb(13, 255, 0);
-            width: 30%;
-            padding: 30px 5px;
-        }
+     
 
-        .performance-aside .header {
+      #performance-info{   
+        /* display: inline-block; */
+        height: 200px;
+        margin:0 auto;
+        background-color: aquamarine; 
+        height: 200px;
+        width: 40%;
+        border: 1px solid rgb(222, 192, 0);
+      }
+        .performance-aside{
             float: left;
-            border: 1px solid rgb(255, 0, 225);            
-            font-size: 1.5em;
-            width: 100%;
-            height: 15%;            
+            height: 200px;
+            width: 40%;
+            border: 1px solid rgb(222, 0, 15); 
         }
-        
-        .performance-aside .header h4 {    
-            top:1;
-            left:0;
+        .performance-aside .header {    
+          /* float: left; */
+          height: 100px;
+          width: 35%;
+          border: 4px solid rgb(85, 8, 240);                  
+        }
+        .performance-aside .header h4 {  
+            float: right;
+            width: 30%;
             font-size: 0.8em;
             font-weight: 100;
         }
         .performance-aside .header h2 {
-            top:1;
-            left:0;
+            float: right;
             font-weight: bold;
             font-size: 1em;
         }
-        
-        
-        .performance-aside .main {
+         #performance-info .main {              
+            float: right;
+            width: 60%;
+            height: 200px;
+            background-color:  rgb(30, 30, 222);      
+        }
+         #performance-info .footer{           
             float: left;
-            width: 100%;      
-            height: 70%;      
-            border: 1px solid rgb(255, 0, 225);    
-            
+            width: 30%;
+            height: 50%;
+            border: 1px solid rgb(105, 197, 24);                               
         }
-        .performance-aside p {
-            font-size: 0.9em;
-            top:3vh;
-        }
-        .performance-aside span {
-            font-size: 1em;
-            /* top:3vh; */
-        }
-
-         .footer{           
-          margin-top:30px;          
-          border: 1px solid rgb(255, 0, 225);    
-                   
-          width: 100%;
-          height: 15%;  
-        }
-         .performance-aside .footer .box-learn{
+         #performance-info .footer .box-learn{
             float:left;
             padding:20px;
             border: 1px solid rgb(255, 0, 225);    
             width: 40%;
         }
          .performance-aside .footer .box-buy{
-            float:right;
             padding:10px;
             border: 1px solid rgb(255, 0, 225);    
             width: 40%;            
@@ -152,13 +145,25 @@
           .btn-learn{
           border: 1px solid rgb(255, 0, 225);    
           }
+        
+        .performance-aside p {
+            font-size: 0.9em;
+            top:3vh;
+        }
+        .performance-aside span {
+            font-size: 1em;
+            /* top:3vh; */
+        }
+
+          .clr{
+            clear:both;
+          }
     </style>
   </head>
 
   <body>
     <section id="section-three">
       <section class="model-specs">
-        <div class="container">
           <ul class="specs-content">
             <li>
               <div class="spec-item">
@@ -191,13 +196,12 @@
         </div>
       </section>
 
-
-       <div class="container">
-        <div class="performance-aside">
+<div class="clr"></div>
+       <div id="performance-info">
+        <div class="performance-aside header">
             <h4>Performance</h4>
             <h2>Quickest Acceleration</h2>
-          </div>
-
+            
       <div class="performance-aside footer">
             <div class="box-learn">
               <p class="btn-learn">Learn More</p>
@@ -207,6 +211,8 @@
             </div>
           </div>
 
+          </div>
+          
           <div class="performance-aside main">
             <p>
               Model 3 comes with the option of dual motor all-wheel drive, 20”
@@ -217,8 +223,10 @@
               about Model 3 or <a href="#">schedule a demo drive today</a>.
             </p>
           </div>
-          <div class="clr"></div>
-        </div>
+
+
+          <!-- <div class="clr"></div> -->
+        <!-- </div> --></div>
     </section>
   </body>
 </html>
