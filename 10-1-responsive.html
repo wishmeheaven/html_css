@@ -18,6 +18,17 @@
       margin-top: 10px;
     }
 
+    
+/*  --- A TEST FROM AN ARTICLE ---*/
+/* body {
+  font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
+} */
+
+/*  --- A TEST FROM AN ARTICLE  - just another version ---*/
+body {
+  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+}
+
     .width-viewport {
       font-size: 3vw;
       background-color: rgb(19, 93, 69);
@@ -34,59 +45,73 @@
         white-space: nowrap;
     }
 
+/*  --- ANOTHER TEST FROM AN ARTICLE ---*/
+/* html {
+  font-size: 16px;
+}
+@media screen and (min-width: 320px) {
+  html {
+    font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+  }
+}
+@media screen and (min-width: 1000px) {
+  html {
+    font-size: 22px;
+  }
+} */
   </style>
   <body>
       <div class="unchanged">
-            <h4 id="unchanged">This header doesn't change its size when the screen does</h4>
+            <h4 id="unchanged">A standard h4</h4>
         </div>
     <div>
       <p class="width-viewport">
-        p: 4vw - Relative to 1% of the width of the viewport
+        p: 3vw - Relative to 1% of the width of the viewport
       </p>
     </div>
     <div>
       <p class="height-viewport">
-        p: 4vh - Relative to 1% of the width of the viewport
+        p: 3vh - Relative to 1% of the width of the viewport
       </p>
     </div>
     <div>
       <h4 class="width-viewport">
-        h4: 4vw - Relative to 1% of the width of the viewport
+        h4: 3vw - Relative to 1% of the width of the viewport
       </h4>
     </div>
     <div>
       <h4 class="height-viewport">
-        h4: 4vh - Relative to 1% of the width of the viewport
+        h4: 3vh - Relative to 1% of the width of the viewport
       </h4>
     </div>
     <div>
       <h3 class="width-viewport">
-        h3: 4vw - Relative to 1% of the width of the viewport
+        h3: 3vw - Relative to 1% of the width of the viewport
       </h3>
     </div>
     <div>
       <h3 class="height-viewport">
-        h3: 4vh - Relative to 1% of the width of the viewport
+        h3: 3vh - Relative to 1% of the width of the viewport
       </h3>
     </div>
     <div>
       <h2 class="width-viewport">
-        h2: 4vw - Relative to 1% of the width of the viewport
+        h2: 3vw - Relative to 1% of the width of the viewport
       </h2>
     </div>
     <div>
       <h2 class="height-viewport">
-        h2: 4vh - Relative to 1% of the width of the viewport
+        h2: 3vh - Relative to 1% of the width of the viewport
       </h2>
     </div>
     <div>
       <h1 class="width-viewport">
-        h1: 4vw - Relative to 1% of the width of the viewport
+        h1: 3vw - Relative to 1% of the width of the viewport
       </h1>
     </div>
     <div>
       <h1 class="height-viewport">
-        h1: 4vh - Relative to 1% of the width of the viewport
+        h1: 3vh - Relative to 1% of the width of the viewport
       </h1>
     </div>
   </body>
