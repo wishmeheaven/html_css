@@ -17,19 +17,24 @@
         }
         
         .container{
-          display: inline-block;
+          /*  DOESN'T NEED TO BE INLINE-BLOCK!!*/
+          
           background-color: gray;
           padding-top: 100px;
           height: 580px;
           border-radius: 3px solid #000;
         }
         
-        .box{
-          float: left;
+        .box {
+          /*  MUST BE AN INLINE-BLOCK SO THE MARGIN WILL WORK!*/
+          /* INLINE-BLACK IS AFFECT THE ELEMENT ITSELF*/
+          
+          display: inline-block;
           width: 200px;
           height: 100px;
-          margin: 10px;
+          margin-bottom: 5px;
         }
+
         #box1{
           background-color: rgb(2, 54, 54);          
         }
@@ -46,15 +51,25 @@
       /* Smartphones */
          @media only screen and (max-width: 500px) {
           .container {
-              background: rgba(255, 229, 97, 0.479);              
+              background: rgba(255, 229, 97, 0.479);            
           }
+            .box{
+              width: 200px;
+          height: 100px;
+                    margin-bottom: 5px;
+
+            }
 }
       /* Normal */
       @media(min-width: 501px) and (max-width: 768px)  {
           .container {
               background: rgba(232, 141, 44, 0.655);
           }
-      
+          .box{
+          width: 200px;
+          height: 100px;
+          margin-bottom: 5px;
+        }
       }
 
       /* Tablet */
@@ -62,7 +77,10 @@
           .container {
               background: rgba(248, 21, 47, 0.576);
           }
-           
+            .box{width: 200px;
+          height: 100px;
+          margin-bottom: 5px;
+            }
         }
       
       /* Widescreen */
@@ -70,7 +88,11 @@
           .container {
               background: rgba(249, 97, 229, 0.446);
           }
- 
+          .box{
+          width: 200px;
+          height: 100px;
+          margin-bottom: 5px;
+          }
       }
 
     </style>
