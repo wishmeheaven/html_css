@@ -169,7 +169,6 @@ top: 0;
 }
 
 .model-specs .container {
-  margin: 0 auto;
   height: 100%;
   width: 100%;
   overflow: hidden;
@@ -365,7 +364,7 @@ font-weight--xlight: 200;
          .footer{           
           margin-top:30px;          
           border: 1px solid rgb(255, 0, 225);    
-          background-color: aqua;          
+                   
           width: 100%;
           height: 15%;  
         }
@@ -380,6 +379,7 @@ font-weight--xlight: 200;
             padding:10px;
             border: 1px solid rgb(255, 0, 225);    
             width: 40%;            
+            min-width:40%;
         }
           .safety-aside .btn-buy{          
           border: 1px solid rgb(255, 0, 225); 
