@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mobile Responsiveness</title>
+    <style>
+
+        body{
+        }
+
+        p {
+            padding: 10px;
+            background-color: darkgrey;
+            color: #fff;            
+        }
+        
+        .container{
+          display: inline-block;
+          background-color: gray;
+          padding-top: 100px;
+          height: 580px;
+          border-radius: 3px solid #000;
+        }
+        
+        .box{
+          float: left;
+          width: 200px;
+          height: 100px;
+          margin: 10px;
+        }
+        #box1{
+          background-color: rgb(2, 54, 54);          
+        }
+        #box2{
+          background-color: rgb(8, 103, 103);
+        }
+        #box3{
+          background-color: rgb(10, 166, 166);
+        }
+        #box4{
+          background-color: rgb(27, 240, 240);
+        }
+        
+      /* Smartphones */
+         @media only screen and (max-width: 500px) {
+          .container {
+              background: rgba(255, 229, 97, 0.479);              
+          }
+}
+      /* Normal */
+      @media(min-width: 501px) and (max-width: 768px)  {
+          .container {
+              background: rgba(232, 141, 44, 0.655);
+          }
+      
+      }
+
+      /* Tablet */
+      @media(min-width: 769px) and (max-width: 1200px)  {
+          .container {
+              background: rgba(248, 21, 47, 0.576);
+          }
+           
+        }
+      
+      /* Widescreen */
+      @media(min-width: 1201px)  {
+          .container {
+              background: rgba(249, 97, 229, 0.446);
+          }
+ 
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+    <div class="box">
+      <p id="box1">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur
+        exercitationem maxime at cupiditate cumque beatae ratione quo, odio, eum
+        illo natus qui animi optio placeat!
+      </p>
+    </div>
+    <div class="box">
+      <p id="box2">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur
+        exercitationem maxime at cupiditate cumque beatae ratione quo, odio, eum
+        illo natus qui animi optio placeat!
+      </p>
+    </div>
+    <div class="box">
+      <p id="box3">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur
+        exercitationem maxime at cupiditate cumque beatae ratione quo, odio, eum
+        illo natus qui animi optio placeat!
+      </p>
+    </div>
+    <div class="box">
+      <p id="box4">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur
+        exercitationem maxime at cupiditate cumque beatae ratione quo, odio, eum
+        illo natus qui animi optio placeat!
+      </p>
+    </div>
+    </div>
+  </body>
+</html>
