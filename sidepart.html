@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floating HTML Elements</title>
+</head>
+<style>
+    *{
+        padding: 0px;
+        margin: 0px auto;
+        box-sizing: border-box;
+    }
+    body{
+        width: 700px;
+        height: 300px;
+    }
+    div{
+     border: 1px solid black;
+     margin-top: 4px;
+    }
+    .header{
+        text-align: center;
+        background-color: rgb(255, 172, 95);
+        width: calc(100% - 2px);
+        height: 19%;
+    }
+    .header h3{
+        padding-bottom: px;
+    }
+    .aside{
+        float: left;
+        background-color: rgb(37, 153, 27);
+        width: calc(30% - 2px);
+        height: 77%;
+    }
+    .aside h3{
+        text-align:start;
+        padding-left: 15px;
+    }
+    .main{
+        float: right;
+        background-color: rgb(126, 41, 255);
+        width: calc(70% - 3px);
+        height: 77%;
+    }
+    .main h3{
+        text-align:end;
+        padding-right: 15px;
+
+    }
+    .clr{
+        clear: both;
+        border: none;
+    }
+    .footer{
+        text-align: center;
+        background-color: rgb(21, 108, 239);
+        width: calc(100% - 2px);
+        height: 19%;
+        margin-top: 9px;
+    }
+    .footer h3{
+        padding-bottom: 15px;
+    }
+
+    /*=================== Media Queries ===================*/
+      /* Smartphones */
+      @media only screen and (max-width: 200px) {
+         .aside {
+                    display: none;        
+                 }
+         .main{
+                width: 100%;
+            }
+      }
+
+      @media(min-width: 201px) and (max-width: 300px)  {
+         .aside {
+             width: calc(5% - 2px);
+         }
+          .main{
+        width: calc(95% - 3px);
+         }     
+      }
+
+      @media(min-width: 301px) and (max-width: 400px)  {
+         .aside {
+            width: calc(10% - 2px);
+         }
+          .main{
+             width: calc(90% - 3px);
+        }
+      }
+
+      @media(min-width: 401px) and (max-width: 500px)  {
+         .aside {
+            width: calc(15% - 2px);
+         }
+          .main{
+        width: calc(85% - 3px);
+        }
+      }
+      @media(min-width: 501px) and (max-width: 700px)  {
+         .aside {
+        width: calc(20% - 2px);
+         }
+          .main{
+             width: calc(80% - 3px);
+         }
+      }
+
+      @media(min-width: 701px) and (max-width: 1200px)  {
+         .aside {
+            width: calc(25% - 2px);
+         }
+        .main{
+            width: calc(75% - 3px);
+        }
+      }
+
+      @media(min-width: 1201px)  {
+         .aside {
+            width: calc(30% - 2px);
+         }
+        .main{
+            width: calc(70% - 3px);
+        }
+      }
+
+
+    </style>
+</style>
+<body>
+    <div class="header">
+        <h3>Header</h3>
+    </div>
+    <div class="aside">
+        <h3>Aside</h3>
+    </div>
+    <div class="main">
+        <h3>Main</h3>
+    </div>
+    <div class="clr"></div>
+    <div class="footer">
+        <h3>Footer</h3>
+    </div>
+
+
+</body>
+</html>
