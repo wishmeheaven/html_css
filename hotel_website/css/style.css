@@ -1,4 +1,4 @@
-@import url('path/to/font-awesome/css/font-awesome.min.css');
+@import url('https://fonts.cdnfonts.com/css/gotham');
 
 /* Reset */
 * {
@@ -9,7 +9,14 @@
 
 /* Main styling */
 html, body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                                                                        font-family: 'Gotham', sans-serif;
+                                                                    font-family: 'Gotham Black', sans-serif;
+                                                                    font-family: 'Gotham Light', sans-serif;
+                                                                    font-family: 'Gotham Thin', sans-serif;
+                                                                    font-family: 'Gotham XLight', sans-serif;
+                                                                    font-family: 'Gotham Book', sans-serif;
+                                                                    font-family: 'Gotham Ultra', sans-serif;
+                                                
     line-height: 1.7em;
 }
 

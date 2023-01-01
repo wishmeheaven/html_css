@@ -1,4 +1,6 @@
-@import url("path/to/font-awesome/css/font-awesome.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@font-face{font-family:Gotham SSm;font-weight:700;font-display:swap;font-style:normal;src:url(https://cdn-design.tesla.com/tds-fonts/x/woff2/GothamSSm-Bold_Web.woff2) format("woff2")}@font-face{font-family:Gotham SSm;font-weight:500;font-display:swap;font-style:normal;src:url(https://cdn-design.tesla.com/tds-fonts/x/woff2/GothamSSm-Medium_Web.woff2) format("woff2")}@font-face{font-family:Gotham SSm;font-weight:400;font-display:swap;font-style:normal;src:url(https://cdn-design.tesla.com/tds-fonts/x/woff2/GothamSSm-Book_Web.woff2) format("woff2")}@font-face{font-family:Gotham SSm;font-weight:300;font-display:swap;font-style:normal;src:url(https://cdn-design.tesla.com/tds-fonts/x/woff2/GothamSSm-Light_Web.woff2) format("woff2")}@font-face{font-family:Gotham SSm;font-weight:200;font-display:swap;font-style:normal;src:url(https://cdn-design.tesla.com/tds-fonts/x/woff2/GothamSSm-XLight_Web.woff2)}
+
 
 * {
   margin: 0;
@@ -7,13 +9,14 @@
 }
 
 html{
-  font-family: 'roboto', sans-serif;
+font-family: 'Gotham SSm','Roboto', sans-serif;
+
 }
+                                                                                                                                                                      
 
 #section-one {
     position: relative;
     display: block;
-    
     border: 2px solid rgb(47, 50, 225);
     width: 100%;
     /* background: url(../img/Model-3-Main.jpg) no-repeat calc(20% - 100px)/cover; */
@@ -431,7 +434,7 @@ font-weight--xlight: 200;
           }
 
 
-      #section-three {
+     #section-three {
         position: relative;
         margin: auto;
         border: 2px solid rgb(47, 50, 225);
@@ -441,6 +444,58 @@ font-weight--xlight: 200;
         height: 500px;
       }
 
+      .model-specs-[erf] {
+        float: left;
+        width: 75%;
+        min-width: 50%
+        border: 2px solid rgb(198, 46, 195);
+        height: 120px;
+        color: #fff;
+        margin: 340px auto 50px;
+        overflow: hidden;
+      }
+
+      .model-specs-[erf] .spec-item-perf {
+        border: 3px solid rgb(198, 46, 46);
+        width: 20%;
+        height: 100px;
+        float: right;
+        margin: 5px;
+        text-align: center;
+      }
+
+      .model-specs-[erf] h2 {
+        font-size: 2em;
+        width: 100%;
+      }
+      .model-specs-[erf] p {
+        border: 1px solid rgb(0, 208, 255);
+        font-size: 0.9em;
+        line-height: 1.1em;
+      }
+
+      ul {
+        list-style: none;
+      }
+      .model-specs-[erf] .box-buy {
+        text-align: center;
+        border: 3px solid #fff;
+        border-radius: 4px;
+        width: 20%;
+        float: left;
+        margin: 10px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      .box-buy .btn-buy p {
+        border: 1px solid rgb(255, 50, 64);
+        font-weight: bold;
+        font-size: 1em;
+        padding: 10px 10px;
+        background-color: transparent;
+      }
+     
 
       #performance-info{   
         /* display: inline-block; */
