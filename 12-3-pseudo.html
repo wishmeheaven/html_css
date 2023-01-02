@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo3</title>
+</head>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: box-border;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+.container{
+    display: flex;
+    align-self: center; 
+    position:relative;
+    width: 300px;
+    height: 300px; 
+    background-color: rgb(47, 0, 255);
+}
+
+.half{
+    position: relative;
+}
+.half{
+    position: absolute;
+    width: 150px;
+    height: 100%;
+    background-color:red;
+}
+
+.container:hover::after{
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(255, 187, 0);
+    width: 150px;
+    height: 100%;
+}
+
+</style>
+
+<body>
+    
+    <div class="container">
+        <div class="half">
+
+        </div>
+    </div>
+
+</body>
+</html>
