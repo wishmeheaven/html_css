@@ -31,9 +31,9 @@
         text-align: center;
         display: flex;
         flex-direction: column;
-        padding: 2em;
-        position: relative;        
-        width: 350px;
+        padding: 2.6em 3.2em;
+        position: relative;
+        width: 280px;
         height: 200px;
         justify-content: space-between;
         /*border: 2px solid blue;*/
@@ -50,31 +50,72 @@
       }
       h2 {
         font-weight: bold;
-        color: rgb(0, 0, 0);
-        font: #fff;
+        color: #fff;
+        font-size: 1.1em;
         /* display: none; */
       }
       .box {
+        position: relative;
         border-radius: 2px;
-        width: 50px;
-        height: 50px;
+        width: 1.7em;
+        height: 1.7em;
       }
 
-      #box1 {
-        border-top:rgb(255, 55, 0) 4px solid;
-        border-left:rgb(255, 55, 0) 4px solid;
-      }
-      #box2 {
-        border-top:rgb(255, 55, 0) 4px solid;
-        border-right:rgb(255, 55, 0) 4px solid;
+      /* #box1 {
+        border-top:rgb(255, 55, 0) 3.5px solid;
+        border-left:rgb(255, 55, 0) 3.5px solid;
+      } */
+      /* #box2 {
+        border-top:rgb(255, 55, 0) 3.5px solid;
+        border-right:rgb(255, 55, 0) 3.5px solid;
       }
       #box3 {
-        border-left:rgb(255, 55, 0) 4px solid;
-        border-bottom:rgb(255, 55, 0) 4px solid;
+        border-left:rgb(255, 55, 0) 3.5px solid;
+        border-bottom:rgb(255, 55, 0) 3.5px solid;
       }
       #box4 {
-        border-right: rgb(255, 55, 0) 4px solid;
-        border-bottom:rgb(255, 55, 0) 4px solid;
+        border-right: rgb(255, 55, 0) 3.5px solid;
+        border-bottom:rgb(255, 55, 0) 3.5px solid;
+      } */
+      #box1::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        border-top: rgb(255, 55, 0) 3.5px solid;
+        border-left: rgb(255, 55, 0) 3.5px solid;
+      }
+      #box2::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        border-top: rgb(255, 55, 0) 3.5px solid;
+        border-right: rgb(255, 55, 0) 3.5px solid;
+      }
+      #box3::after {
+        border-bottom: rgb(255, 55, 0) 3.5px solid;
+        border-left: rgb(255, 55, 0) 3.5px solid;
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+      }
+      #box4::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        border-bottom: rgb(255, 55, 0) 3.5px solid;
+        border-right: rgb(255, 55, 0) 3.5px solid;
       }
     </style>
   </head>
