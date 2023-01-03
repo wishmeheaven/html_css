@@ -27,23 +27,22 @@
           #box-main:before{
             position: absolute;
             content: "";      
-            width: 200px;
-            height: 200px;
+            width:100%;
+            height: 100%;
             background: rgb(18, 209, 155);
             transition: all 1s;
-            z-index: 2;
-            transform: translateX(-100%);
+            z-index: 0;
+            transform:translateX(-100%);
          }
 
+         /* Moving "back" to INITIAL absolute position */
           #box-main:hover::before{
-           transform: translateX(0);
+          transform: translateX(0);
          }
-
 
     </style>
 </head>
 <body>
     <div id="box-main"></div>
-     <div id="box-ps"></div>
 </body>
 </html>
