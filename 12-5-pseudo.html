@@ -13,31 +13,32 @@
       font-family: 'Poppins', sans-serif;
     }
     body {
-      background-color: #f0f0f0;
-        width: 100%;
-        max-width: fit-content;
-        padding: 50px;
+      background-color: rgb(229, 229, 229);
+      padding: 60px; 
+      min-width: fit-content;       
     }
-    p {
-        width: 100%;
-        background-color: #ffffff;
-        padding: 3.5em;
+    p {        
+        width: 400px;
+        min-width: 50vw;
+        background-color: #ffffff; 
+        padding: 3em;
         text-align: center;
-        font-size: 16px;
+        font-size: .85em;
     }
     a{
         white-space: nowrap;
         position: relative;
-        color: orange;
+        color: rgb(255, 170, 0);
         font-size: inherit;
     }
     a:after {
         position: absolute;
         width: 12em;
+        border-radius: 7px;
         background-color: #202842;
         color: #ffffff; 
         content: attr(data-tip);
-        padding: 0.6em 0;
+        padding: 10px;
         margin: auto;
         left: 0;
         right: 0;
@@ -77,26 +78,26 @@
 
   <body>        
     <p>     
-      Lorem ipsum dolor sit <a href="#" data-tip="What a cool tool(tip)">Consectetur</a> adipisicing elit. Mollitia minus,
+      Lorem ipsum dolor sit <a href="#" data-tip="What a cool tool!">Consectetur</a> adipisicing elit. Mollitia minus,
       ipsa sed distinctio commodi corporis dolores repudiandae et ea non optio
       cum assumenda recusandae. Blanditiis quasi officia minima modi ipsum aut
       ipsa ducimus explicabo veritatis qui fuga porro veniam voluptatibus
-      expedita <a href="#" data-tip="cooltool(tip)">minuArchitecto </a> exercitationem fugiat dicta! doloribus deserunt
+      expedita <a href="#" data-tip="...although">Architecto </a> exercitationem fugiat dicta! doloribus deserunt
       soluta, velit distinctio vel quaerat dolorum cumque harum consectetur
-      unde, dolore id quam commodi sequi voluptate deleniti saepe totam <a href="#" data-tip="cooltool(tip)">Consequuntulaudantium blanditiis</a> quia
+      unde, dolore id quam commodi sequi voluptate deleniti saepe totam <a href="#" data-tip="It's took awhile">Consequuntulaudantium blanditiis</a> quia
       sint autem quod? r soluta  consequatur earum veniam inventore
       consectetur officia eligendi animi corporis maiores? Ducimus fugit laudantium atque in, inventore exercitationem ut
       dolorem expedita temporibus iure reiciendis.Odio?</p>
     </br>
-        <p>Lorem ipsum dolor sit <a href="#" data-tip="cooltool(tip)">voluptatibusameBlanditiis</a> adipisicing elit. 
+        <p>Lorem ipsum dolor sit <a href="#" data-tip="To wrap my head around">voluptatibusameBlanditiis</a> adipisicing elit. 
        Mollitia minus,ipsa sed  distinctio commodi corporis dolores 
-       repudiandae et ea <a href="#" data-tip="cooltool(tip)">noLlaudantium</a>
+       repudiandae et ea <a href="#" data-tip="But not it's quite wrapped">noLlaudantium</a>
       cum assumenda recusandae.  quasi officia minima modi ipsum au ipsa ducimus explicabo veritatis qui fuga porro veniam 
-      expedita minus, exercitationem fugiat dicta!>Architecto doloribus deserunt
+      expedita minus, <a href="#" data-tip="Wrapped with this...">exercitationem</a> fugiat dicta! Architecto doloribus deserunt
       soluta, velit distinctio vel quaerat dolorum cumque harum consectetur
       unde, dolore id quam commodi sequi voluptate deleniti saepe totam ad, quia
       sint autem quod? Consequuntur soluta consequatur earum veniam inventore
-      <a href="#" data-tip="cooltool(tip)">Olaudantium blanditiis</a>, consectetur officia eligendi animi corporis
+      <a href="#" data-tip="Cool shit">Olaudantium blanditiis</a>, consectetur officia eligendi animi corporis
       maiores? Ducimus fugit laudantium atque in, inventore exercitationem ut
       dolorem expedita temporibus iure reiciendis. Odio?
     </p>
