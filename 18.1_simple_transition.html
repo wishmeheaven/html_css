@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Transition (ex.14-1)</title>
+    <style>
+        body {
+            background: #333;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        #box-main {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background: rgb(255, 47, 165);    
+            transition: all 1s;
+            overflow: hidden;
+         }
+        
+          #box-main:before{
+            position: absolute;
+            content: "";      
+            width: 200px;
+            height: 200px;
+            background: rgb(18, 209, 155);
+            transition: all 1s;
+            z-index: 2;
+            transform: translateX(-100%);
+         }
+
+          #box-main:hover::before{
+           transform: translateX(0);
+         }
+         #box-main.hover{
+            background: rgb(57, 47, 255);  
+         }
+
+    </style>
+</head>
+<body>
+    <div id="box-main"></div>
+     <div id="box-ps"></div>
+</body>
+</html>
