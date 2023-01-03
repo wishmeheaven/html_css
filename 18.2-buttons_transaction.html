@@ -29,7 +29,7 @@
             margin: 1rem;
             padding: 1em 1em;
             transition: all;
-            /* overflow: hidden; */
+            overflow: hidden;
         }
 
         #btn-trans-y::after {         
@@ -68,6 +68,7 @@
             transform: translateX(0);
         }
 
+           
         #btn-rotate::after {         
             position: absolute;
             content:"";
@@ -86,7 +87,9 @@
         #btn-rotate:hover::after {
             transform: translateY(0) translateY(0);
         }
-        #btn-skew::after {         
+
+
+        #btn-skew::before {         
             position: absolute;
             content:"";
             top:0;
@@ -95,32 +98,33 @@
             width:100%;
             height:100%;
             background: rgb(243, 0, 166);
-            transform: translateX(-100%);
-            transition-duration: 1s;
+            transform: skewY(90deg) skewX(270deg);
+            transition-duration: 2s;
             transition-timing-function: ease-in-out;
+           
         }
 
-        #btn-skew:hover::after {
-            transform: translateX(0);
+        #btn-skew:hover::before {
+            transform: skewY(0deg) skewX(45deg);  
+            
         }
-        #btn-scale::after {         
+        /* #btn-scale::after {         
             position: absolute;
             content:"";
             top:0;
             left: 0;
-            z-index:-1;
+            z-index:2;
             width:100%;
-            height:100%;
-            background: rgb(0, 0, 0);
-            transform: translateX(-100%);
-            transition-duration: 1s;
+            height:100%; */
+            /* transform: scale(3.5, 3.5); */
+            /* transition-duration: 1s;
             transition-timing-function: ease-in-out;
-        }
+        } */
         #btn-scale:hover::after {
             transform: translateX(0);
         }
-
-
+       
+    
         
     </style>
 </head>
@@ -131,7 +135,7 @@
     <button id="btn-rotate"><h2>Rotate</h2></button>
     </div>
     <div>
-    <button id="btn-scale"><h2>Scale</h2></button>
+    <button id="btn-scale"><h2><span>Scale</span></h2></button>
     <button id="btn-skew"><h2>Skew</h2></button>
     </div>
 </body>
