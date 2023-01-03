@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo5</title>
+    <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background-color: #f0f0f0;
+        width: 100%;
+        max-width: fit-content;
+        padding: 50px;
+    }
+    p {
+        width: 100%;
+        background-color: #ffffff;
+        padding: 3.5em;
+        text-align: center;
+        font-size: 16px;
+    }
+    a{
+        white-space: nowrap;
+        position: relative;
+        color: orange;
+        font-size: inherit;
+    }
+    a:after {
+        position: absolute;
+        width: 12em;
+        background-color: #202842;
+        color: #ffffff; 
+        content: attr(data-tip);
+        padding: 0.6em 0;
+        margin: auto;
+        left: 0;
+        right: 0;
+        bottom: 1.5em;
+        text-align: center;
+        border-radius: 0.2em;
+    }
+    a:before{
+        position: absolute;
+        content: "";
+        height: 0;
+        width: 0;
+        color:#fff;
+        border-top: 0.5em solid #202842;
+        border-left: 0.5em solid transparent;
+        border-right: 0.5em solid transparent;
+        margin: auto;
+        left: 0;
+        right: 0;
+        bottom: 1em;
+    }
+    a:before,
+    a:after {
+        display: none;
+    }
+    a:hover:before{
+        display: none;
+    }
+    a:hover:before,
+    a:hover:after {
+        display: block;
+    }
+
+
+  </style>
+  </head>
+
+  <body>        
+    <p>     
+      Lorem ipsum dolor sit <a href="#" data-tip="What a cool tool(tip)">Consectetur</a> adipisicing elit. Mollitia minus,
+      ipsa sed distinctio commodi corporis dolores repudiandae et ea non optio
+      cum assumenda recusandae. Blanditiis quasi officia minima modi ipsum aut
+      ipsa ducimus explicabo veritatis qui fuga porro veniam voluptatibus
+      expedita <a href="#" data-tip="cooltool(tip)">minuArchitecto </a> exercitationem fugiat dicta! doloribus deserunt
+      soluta, velit distinctio vel quaerat dolorum cumque harum consectetur
+      unde, dolore id quam commodi sequi voluptate deleniti saepe totam <a href="#" data-tip="cooltool(tip)">Consequuntulaudantium blanditiis</a> quia
+      sint autem quod? r soluta  consequatur earum veniam inventore
+      consectetur officia eligendi animi corporis maiores? Ducimus fugit laudantium atque in, inventore exercitationem ut
+      dolorem expedita temporibus iure reiciendis.Odio?</p>
+    </br>
+        <p>Lorem ipsum dolor sit <a href="#" data-tip="cooltool(tip)">voluptatibusameBlanditiis</a> adipisicing elit. 
+       Mollitia minus,ipsa sed  distinctio commodi corporis dolores 
+       repudiandae et ea <a href="#" data-tip="cooltool(tip)">noLlaudantium</a>
+      cum assumenda recusandae.  quasi officia minima modi ipsum au ipsa ducimus explicabo veritatis qui fuga porro veniam 
+      expedita minus, exercitationem fugiat dicta!>Architecto doloribus deserunt
+      soluta, velit distinctio vel quaerat dolorum cumque harum consectetur
+      unde, dolore id quam commodi sequi voluptate deleniti saepe totam ad, quia
+      sint autem quod? Consequuntur soluta consequatur earum veniam inventore
+      <a href="#" data-tip="cooltool(tip)">Olaudantium blanditiis</a>, consectetur officia eligendi animi corporis
+      maiores? Ducimus fugit laudantium atque in, inventore exercitationem ut
+      dolorem expedita temporibus iure reiciendis. Odio?
+    </p>
+  </body>
+</html>
+
