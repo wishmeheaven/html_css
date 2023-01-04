@@ -8,73 +8,103 @@
     <title>Grid Basics-2</title>
     <style>
         body {
-           display: flex;
-              justify-content: center;
-                align-items: center;
-                  width: 100vw;
-                    margin: 10em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+         margin: 10em;
         }
-        .grid {
-            width: fit-content;
-            min-width: fit-content;
-            height: max-content;
-            grid-row: 2 / span 3;
-            min-height: max-content;
+        .container {
             display: grid;
-            grid-template-rows: repeat(1, 1fr 1fr);
-            grid-template-columns: repeat(2, 1fr 1fr 1fr);
-            gap: 1.5rem;
-            font-size: 3em;
+            grid-template-areas:
+            'header header header header'
+            'sidebar sidebar content content'
+            'sidebar sidebar footer sidebar2';
+            gap: 1rem;
+        }    
+        
+        .header {
+            grid-area: header;
+            background: rgb(106, 33, 203);
         }
+        .sidebar {
+            grid-area: sidebar;
+            background: rgb(66, 191, 236);
+        }
+        .sidebar2 {
+            grid-area: sidebar2;
+            background: rgb(77, 237, 199);
+        }
+        .content {
+            grid-area: content;
+            background: rgb(32, 87, 254);
+        }
+        .footer {
+            grid-area: footer;
+            background: rgb(73, 64, 172);
+        }
+
         .item {
             border: 1px solid #000;   
             padding: 5rem; 
             border-radius: 15px;
         }
-        .item:first-child { 
-            grid-column: 1 / span 4;
+        /**========== Media Queries===========*/
+        @media screen and (max-width: 480px) {
+            .container {
+                grid-template-areas:
+                'header'
+                'sidebar'
+                'content'
+                'sidebar2'
+                'footer';
+            }
         }
-        .item:nth-child(2) {
-            grid-column: 1 / span 2 ;
-            grid-row: 2 / span 2;
+        @media (min-width: 481px) and (max-width: 768px) {
+                .container {
+                 grid-template-areas:
+                'header header header header'
+                'sidebar content content content'
+                'sidebar2 sidebar2 sidebar2 sidebar2'
+                'footer''footer''footer''footer'
+            }
         }
-        .item:nth-child(3) {
-            grid-column: 3 / span 2;
-            grid-row: 2 / span 1;
-        } 
-        .item:nth-child(4) {
-            grid-column: 3 / span 1;
-        }
-        .item:nth-child(5) {
-            grid-column: 4 / span 1;
-        } 
-        .header {
-            background: rgb(106, 33, 203);
-        }
-        .sidebar {
-            background: rgb(66, 191, 236);
-        }
-        .sidebar2 {
-            background: rgb(77, 237, 199);
-        }
-        .content {
-            background: rgb(32, 87, 254);
-        }
-        .footer {
-            background: rgb(73, 64, 172);
-        }
+     @media (min-width: 1024px) {
+            .container {
+                 grid-template-areas:
+                'header header header header'
+                'sidebar content content sidebar2'                
+                'footer''footer''footer''footer'
+            }
+     }
+       
     </style>
 </head>
 <body>
   
 
 </head>
-    <div class="grid">
-        <div class="item header">1</div>
-        <div class="item sidebar">2</div>
-        <div class="item content">3</div>
-        <div class="item sidebar2">4</div>
-        <div class="item footer">5</div>
+    <div class="container">
+        <div class="item header">
+            <h2>Header</h2>
+        </div>
+        <div class="item sidebar">
+            <h2>Sidebar</h2>
+        </div>
+        <div class="item content">
+            <h2>Content</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur 
+                adipisicing elit. Beatae quasi, dignissimos odio 
+                optio suscipit laborum error consectetur, 
+                quam esse distinctio pariatur doloremque sint 
+                itaque numquam.</p>
+        </div>
+        <div class="item sidebar2">
+            <h2>Sidebar2</h2>
+        </div>
+        <div class="item footer">
+            <h2>Footer</h2>
+        </div>
     </div>
 </body>
 </html>
