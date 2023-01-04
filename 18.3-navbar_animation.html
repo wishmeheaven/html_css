@@ -33,7 +33,10 @@
         width:min-content;
         position: relative;
         }
-        li{
+        li{            
+            width:min-content; 
+            max-width: 100%;
+            margin: 0 .3em;
             position:relative;
             padding: 0.5rem;
             background-color: transparent;
@@ -44,7 +47,7 @@
             padding: 2px;            
             transition: all;
             position: relative;
-            border: 2px solid rgb(48, 22, 177);
+            border: 1px solid rgb(48, 22, 177);
             /* overflow: hidden; */
         }
         li::before {         
@@ -52,7 +55,7 @@
         content:"";
         top: 0;
         left: 0;
-        z-index:2;
+        z-index:-1;
         width:0%;
         height:100%;
         border-bottom: 2px solid rgb(220, 15, 15);
@@ -62,7 +65,25 @@
         }
         li:hover::before {
         transform: translateX(0);
-        width: 95%;
+        width: 100%;
+        }
+        li::after {         
+        position: absolute;
+        content:"";
+        top: 0;
+        left: 0;
+        z-index:-1;
+        width:0%;
+        height:100%;
+        border-top: 2px solid rgb(220, 15, 15);
+        transform: translateX(100%); 
+        transition-duration: 0.5s;
+        transition-timing-function: ease-in-out;
+        }
+        li:hover::after {
+        transform: translateX(0);
+        width: 100%;
+
         }
 </style>
 <body>
