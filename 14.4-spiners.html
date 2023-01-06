@@ -1,14 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spinners (ex-14.4)</title>
-</head>
-<body>
-    <div class="spin1"></div>
-    <div class="spin2"></div>
-    <div></div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>spinners</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        width: 100vw;
+        height: 100vh;
+        min-width: fit-content;
+        min-height: fit-content;
+      }
+      body {
+        margin: 100px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 500px;
+        height: 500px;
+        background-color: rgb(3, 5, 41);
+        border: 50px solid black;
+        border-radius: 50%;
+        box-shadow: 0 0 10px 10px rgb(255, 255, 255),
+          inset 0 0 10px 10px rgb(255, 255, 255);
+        animation: glow 4.5s infinite linear;
+      }
+      body::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -2;
+        background-image: linear-gradient(
+          to right bottom,
+          rgb(6, 1, 52),
+          rgb(12, 48, 189)
+        );
+      }
+      @keyframes glow {
+        0% {
+          border: 50px solid transparent;
+          box-shadow: 0 0 10px 10px rgb(146, 240, 176),
+            inset 0 0 10px 10px rgb(141, 248, 175);
+        }
+
+        50% {
+          border: 50px solid rgb(255, 255, 255);
+          box-shadow: 0px 0px 50px 30px rgb(94, 255, 72),
+            inset 0 0 30px 20px rgb(94, 255, 72);
+        }
+
+        100% {
+          border: 50px solid transparent;
+          box-shadow: 0 0 10px 10px rgb(160, 243, 186),
+            inset 0 0 10px 10px rgb(169, 251, 195);
+        }
+      }
+
+      .spinner1 {
+        position: relative;
+        width: 135px;
+        height: 135px;
+        border-radius: 50%;
+        border: 17px #fbfbfb00 solid;
+        animation: spinner1 linear 2.8s infinite;
+      }
+      .spinner1::before {
+        content: "";
+        width: 100%;
+        top: 0;
+        left: 0;
+        height: 100%;
+      }
+
+      @keyframes spinner1 {
+        0% {
+          transform: rotate(0deg);
+          border-left: rgb(78, 0, 146) 17px solid;
+          box-shadow: 0 0 5px 5px rgb(160, 243, 186),
+            inset 0 0 5px 5px rgb(169, 251, 195);
+        }
+        50% {
+          transform: rotate(180deg);
+
+          border-left: rgb(178, 11, 255) 17px solid;
+          box-shadow: 0px 0px 12px 12px rgb(94, 21010, 72),
+            inset 0 0 10px 10px rgb(94, 255, 72);
+        }
+        100% {
+          transform: rotate(360deg);
+          border-left: rgb(78, 0, 146) 17px solid;
+          box-shadow: 0 0 5px 5px rgb(160, 243, 186),
+            inset 0 0 5px 5px rgb(169, 251, 195);
+        }
+      }
+
+      .spinner2 {
+        position: absolute;
+        width: 270px;
+        height: 270px;
+        background-color: rgba(0, 0, 0, 0);
+
+        border-radius: 50%;
+        border: 20px solid transparent;
+        overflow: hidden;
+        animation: spinner2 3.8s infinite linear;
+      }
+
+      .spinner2::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+
+        border-radius: 50%;
+        z-index: -2;
+      }
+
+      @keyframes spinner2 {
+        0% {
+          border-left: rgb(78, 0, 146) 20px solid;
+          transform: rotate(360deg) translateX(0);
+          box-shadow: 0 0 5px 5px rgb(160, 243, 186),
+            inset 0 0 5px 5px rgb(169, 251, 195);
+          opacity: 0;
+        }
+
+        50% {
+          transform: rotate(180deg);
+          border-left: rgb(178, 11, 255) 20px solid;
+          box-shadow: 0px 0px 15px 15px rgb(94, 255, 72),
+            inset 0 0 10px 10px rgb(94, 255, 72);
+          opacity: 1;
+        }
+
+        100% {
+          transform: rotate(0);
+          border-left: rgb(78, 0, 146) 20px solid;
+          box-shadow: 0 0 5px 5px rgb(160, 243, 186),
+            inset 0 0 5px 5px rgb(169, 251, 195);
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="spinner1"></div>
+    <div class="spinner2"></div>
+
+    <!-- 
+        <div class="spinner3"></div>
+        <div class="spinner4"></div> -->
+  </body>
 </html>
