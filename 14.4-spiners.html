@@ -11,115 +11,130 @@
         padding: 0;
         box-sizing: border-box;
       }
-      html{
-        width: 100vw;
-        height: 100vh;
-        min-width:fit-content;
-        min-height: fit-content;
-      }
+
       body {
-        
-        margin: 100px auto;
         display: flex;
         justify-content: center;
         align-items: center;
+        background-color: rgb(3, 5, 41);
+        margin: 50vh auto;
+      }
+
+      .container {
+        position: relative;
+        width: 30rem;
+        height: 30rem;
+        /* margin: 0 auto; */
         width: 500px;
         height: 500px;
         background-color: rgb(3, 5, 41);
         border: 50px solid black;
         border-radius: 50%;
-        box-shadow:  0 0 10px 10px rgb(255, 255, 255), inset 0 0 10px 10px rgb(255, 255, 255);
-               animation: glow 4.5s infinite linear;
-
+        animation: glow 4.5s infinite alternate;
       }
-      body::after {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        z-index: -2;
-          background-image: linear-gradient(to right bottom, rgb(6, 1, 52), rgb(12, 48, 189));
+      .container::after {
+        border-radius: 50%;
+        /* top: 0;
+      left: 0; */
+        z-index: 0;
+
+        /* background-image: linear-gradient(
+        to right bottom,
+        rgb(6, 1, 52),
+        rgb(9, 59, 255)
+      );
+    /* } */
        
       }
-      @keyframes glow {
 
-            0% {
-        border: 50px solid rgba(255, 255, 255, 0);
-                  box-shadow:  0 0 10px 10px  rgb(146, 240, 176), inset 0 0 10px 10px rgb(141, 248, 175);
-            }
-            
-            50% {
-        border: 50px solid rgb(255, 255, 255);
-                box-shadow:  0px 0px 50px 30px rgb(94, 255, 72), inset 0 0 30px 20px rgb(94, 255, 72); 
-            }
-            
-            100% {
-        border: 50px solid rgba(255, 255, 255, 0);
-                box-shadow:  0 0 10px 10px rgb(160, 243, 186), inset 0 0 10px 10px rgb(169, 251, 195); 
-            }
+      @keyframes glow {
+        0% {
+          border: 50px solid transparent;
+          box-shadow: 0 0 10px 10px rgb(146, 240, 176),
+            inset 0 0 5px 5px rgb(141, 248, 175);
+          background: rgb(6, 1, 52);
+        }
+
+        50% {
+          border: 50px solid rgb(255, 255, 255);
+          box-shadow: 0px 0px 40px 30px rgb(94, 255, 72),
+            inset 0 0 30px 20px rgb(94, 255, 72);
+          background: rgb(1, 23, 151);
+        }
+        100% {
+          border: 50px solid transparent;
+          box-shadow: 0 0 10px 10px rgb(160, 243, 186),
+            inset 0 0 5px 5px rgb(169, 251, 195);
+          background: rgb(6, 1, 52);
+        }
       }
       
 
 
       .spinner1 {
-        /* margin: 50%; */
-        position: relative;
-        width: 135px;
-        height: 135px;
-
+        position: absolute;
+        content: "";
+        width: 54rem;
+        height: 54rem;
+        margin: -15rem -15rem;
         /* background-image: linear-gradient(to right, rgb(10, 0, 105), rgb(30, 71, 233)); */
         border-radius: 50%;
-        border: 17px #fbfbfb00 solid;
-        animation: spinner1 linear 2.8s infinite;
-        /* transition: all 10s ease-in-out; */
-        /* overflow: hidden; */
+        /* border-top-radius: 50%; */
+        /* \* border-bottom-right-radius: 50%; */
+        overflow: hidden;
+
+        /* add a spinning animation */
       }
       .spinner1::before {
-        /* position: absolute; */
+        position: absolute;
         content: "";
         width: 100%;
-        top: 0;
-        left: 0;
+        /* top: 0;
+        left: 0; */
         height: 100%;
-        /* background-image: linear-gradient(to left, rgb(197, 0, 0), yellow); */
-        /* border-radius: 50%; */
-        /* border: 17px; */
+        /* background-image: linear-gradient(to left, rgb(197, 0, 0), yellow);     */
         /* animation: spinner1 linear 10s infinite; */
         /* z-index: 2; */
         /* transition: all 7s ease-in-out; */
+        z-index: 0;
+        border-radius: 50%;
+        animation: spinner1 4s linear infinite forwards;
       }
-     
+
       @keyframes spinner1 {
         0% {
-          transform: rotate(0deg);
-          border-left: rgb(78, 0, 146) 17px solid;
-           box-shadow:  0 0 5px 5px rgb(160, 243, 186), inset 0 0 5px 5px rgb(169, 251, 195); 
-           /* opacity: 0.5; */
-            }
+          border-top: 10rem solid #0099ff00; /* 
+         transform: rotate(0deg);
+          /* border-left: rgb(78, 0, 146) 17px solid; */
+          box-shadow: 0 0 5px 5px rgb(160, 243, 186),
+            inset 0 0 5px 5px rgb(169, 251, 195);
+          opacity: 0.5;
+        }
         50% {
+        border-top: 5rem solid #0099ff00; 
           transform: rotate(180deg);
-          /* background: rgb(30, 106, 165); */
-          border-left: rgb(178, 11, 255) 17px solid;
-      box-shadow:  0px 0px 12px 12px rgb(94, 21010, 72), inset 0 0 10px 10px rgb(94, 255, 72); 
-            /* opacity: 1; */
+      box-shadow:  0px 0px 12px 12px rgb(94, 255, 72), 
+      inset 0 0 15px 15px rgb(94, 255, 72); 
+          opacity: 1;
         }
         100% {
+          border-top: 10rem solid #0099ff00; /* color the head of the spinner */
           transform: rotate(360deg);
-          border-left: rgb(78, 0, 146) 17px solid;
-          box-shadow:  0 0 5px 5px rgb(160, 243, 186), inset 0 0 5px 5px rgb(169, 251, 195); 
-          /* opacity: 0.5; */
+          /* border-left: rgb(78, 0, 146) 17px solid; */
+          box-shadow:  0 0 5px 5px rgb(160, 243, 186), 
+          inset 0 0 5px 5px rgb(169, 251, 195); 
+          opacity: 0.5;
         }
-    }
+      }
       
 
-       .spinner2 {
+      .spinner2 {
+        /* margin: -4rem 4rem; */
         position: absolute;
         width: 270px;
         height: 270px;
         background-color: rgba(0, 0, 0, 0);
-        
+        margin: 4em;
         border-radius: 50%;
         border: 20px solid rgba(255, 255, 255, 0);
         overflow: hidden;
@@ -143,38 +158,101 @@
 
 @keyframes spinner2 {
   0% {
-          border-left: rgb(78, 0, 146) 20px solid;
-    transform: rotate(360deg) translateX(0);
-               box-shadow:  0 0 5px 5px rgb(160, 243, 186), inset 0 0 5px 5px rgb(169, 251, 195); 
-        opacity: 0;
-  }
+          /* border-left: rgb(78, 0, 146) 20px solid; */
+    transform: rotate(0deg);
+      border-left: rgb(255, 6, 151) 20px solid;
+               box-shadow:  0 0 5px 5px rgb(160, 243, 186), 
+               inset 0 0 5px 5px rgb(169, 251, 195); 
+                         opacity: 0.3;
+        }
+  25% {
+          /* border-left: rgb(78, 0, 146) 20px solid; */
+    transform: rotate(2000deg);
+      border-left: rgb(255, 6, 151) 20px solid;
+                border-top: rgb(255, 6, 151) 20px solid;
+               box-shadow:  0 0 10px 10px rgb(128, 242, 13), 
+               inset 0 0 10px 10px rgb(95, 255, 9); 
 
- 
-
-  50% {
-    transform: rotate(180deg);
-          border-left: rgb(178, 11, 255) 20px solid;
-    /* transform: rotate(360deg) scale(50%,50%); */
-          box-shadow:  0px 0px 15px 15px rgb(94, 255, 72), inset 0 0 10px 10px rgb(94, 255, 72); 
-        opacity: 1;
-  }
-
-  
+        }
 
 
-  100% {
+        50% {
+          transform: rotate(5000deg);
+          border-left: rgb(255, 6, 151) 20px solid;
+          border-top: rgb(255, 6, 151) 20px solid;
+          border-bottom: rgb(255, 6, 151) 20px solid;
+          border-right: rgb(255, 6, 151) 20px solid;
+            box-shadow:  inset 0 0 -10px -10px rgb(65, 255, 40), 
+          inset 0 0 10px 10px rgb(86, 255, 63); 
+        
+          opacity: 1;
+        }
+        75% {
+          transform: rotate(540deg);
+          border-left: rgb(255, 6, 151) 20px solid;
+          border-bottom: rgb(255, 6, 151) 20px solid;
+          box-shadow:  0px 0px 10px 10px rgb(102, 255, 0), 
+          inset 0 0 0px 10px rgb(94, 255, 72); 
+          /* transform: rotate(360deg) scale(50%,50%); */
+
+        }
+
+        100% {
+          transform: rotate(90deg);
+            border-left: rgb(255, 6, 151) 20px solid;
+          /* border-left: rgb(78, 0, 146) 20px solid; */
+          /* transform: rotate(360deg) scale(0%,0%); */
+          box-shadow: 0 0 5px 5px rgb(160, 243, 186),
+            inset 0 0 5px 5px rgb(169, 251, 195);
+          opacity: 0.3;
+        }
+      }
+
+      .spinner3 {
+        position: relative;
+        margin-top: 50em;
+        width: 50px;
+        height: 50px;
+        background-color: rgba(233, 45, 11);
+        border-radius: 50%;
+        border: 20px solid transparent;
+        overflow: hidden;
+        animation: spinner3 2s infinite linear;
+      }
+
+      /* .spinner3::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      top: -20em;
+      left: -20em;
+      border-radius: 50%;
+      z-index: -2;
+      border: 5px solid sandybrown;
+    } */
+      -@keyframes spinner3 {
+        0% {
+          transform: translateX(-300px);
+        }
+
+        50% {
+          transform: translateX(0%);
+        }
+
+        100% {
     transform: rotate(0);
           border-left: rgb(78, 0, 146) 20px solid;
     /* transform: rotate(360deg) scale(0%,0%); */
               box-shadow:  0 0 5px 5px rgb(160, 243, 186), inset 0 0 5px 5px rgb(169, 251, 195); 
-        opacity: 0;
-  }
-}
+        }
+      }
     </style>
   </head>
   <body>
-    <div class="spinner1"></div>
-    <div class="spinner2"></div>
+    <div class="container">
+      <div class="spinner1"></div>
+      <div class="spinner2"></div>
 
     <!-- 
         <div class="spinner3"></div>
