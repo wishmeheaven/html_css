@@ -11,103 +11,105 @@
         padding: 0;
         box-sizing: border-box;
       }
-      html{
-        width: 100vw;
-        height: 100vh;
-        min-width:fit-content;
-        min-height: fit-content;
-      }
-      body {
-        
-        margin: 100px auto;
+      body{
+        position: relative;
+        background-color: rgb(3, 5, 41);
+        margin: auto;
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 500px;
-        height: 500px;
-        background-color: rgb(3, 5, 41);
+      }
+   
+      .container {
+        position: relative;
+        width: 30rem;
+        height: 30rem;
+        /* margin: 0 auto; */
         border: 50px solid black;
         border-radius: 50%;
-        box-shadow:  0 0 10px 10px rgb(255, 255, 255), inset 0 0 10px 10px rgb(255, 255, 255);
-               animation: glow 4.5s infinite linear;
-
+        box-shadow: 0 0 10px 10px rgb(255, 255, 255),
+        inset 0 0 10px 10px rgb(255, 255, 255);
+        animation: glow 5s infinite linear;
+        /* overflow: hidden; */
       }
-      body::after {
+      .container::after {
         content: "";
         position: absolute;
         width: 100%;
         height: 100%;
-        top: 0;
-        left: 0;
-        z-index: -2;
-          background-image: linear-gradient(to right bottom, rgb(6, 1, 52), rgb(12, 48, 189));
-       
-      }
-      @keyframes glow {
-
-            0% {
-        border: 50px solid rgba(255, 255, 255, 0);
-                  box-shadow:  0 0 10px 10px  rgb(146, 240, 176), inset 0 0 10px 10px rgb(141, 248, 175);
-            }
-            
-            50% {
-        border: 50px solid rgb(255, 255, 255);
-                box-shadow:  0px 0px 50px 30px rgb(94, 255, 72), inset 0 0 30px 20px rgb(94, 255, 72); 
-            }
-            
-            100% {
-        border: 50px solid rgba(255, 255, 255, 0);
-                box-shadow:  0 0 10px 10px rgb(160, 243, 186), inset 0 0 10px 10px rgb(169, 251, 195); 
-            }
-      }
-      
-
-
-      .spinner1 {
-        /* margin: 50%; */
-        position: relative;
-        width: 135px;
-        height: 135px;
-
-        /* background-image: linear-gradient(to right, rgb(10, 0, 105), rgb(30, 71, 233)); */
         border-radius: 50%;
-        border: 17px #fbfbfb00 solid;
-        animation: spinner1 linear 2.8s infinite;
-        /* transition: all 10s ease-in-out; */
-        /* overflow: hidden; */
-      }
-      .spinner1::before {
-        /* position: absolute; */
+        /* top: 0;
+        left: 0; */
+        z-index: 0;
+     }
+        /* background-image: linear-gradient(
+          to right bottom,
+          rgb(6, 1, 52),
+          rgb(9, 59, 255)
+        );
+      /* } */
+
+      @keyframes glow {
+        0% {
+          border: 50px solid transparent;
+          box-shadow: 0 0 10px 10px rgb(146, 240, 176),
+            inset 0 0 10px 10px rgb(141, 248, 175);
+            background:  rgb(6, 1, 52);
+        }
+
+        50% {
+          border: 50px solid rgb(255, 255, 255);
+         box-shadow: 0 0 15px 15px rgb(146, 240, 176),
+            inset 0 0 15px 15px rgb(141, 248, 175);
+          background:  rgb(1, 20, 125)
+        }
+        50% {
+          border: 50px solid rgb(255, 255, 255);
+          box-shadow: 0px 0px 40px 30px rgb(94, 255, 72),
+            inset 0 0 30px 20px rgb(94, 255, 72);
+          background:  rgb(1, 23, 151)
+        }
+
+        100% {
+          border: 50px solid transparent;
+          box-shadow: 0 0 10px 10px rgb(160, 243, 186),
+            inset 0 0 10px 10px rgb(169, 251, 195);
+              background: rgb(6, 1, 52),
+        }
+    }
+   .spinner1 {
+        position: absolute;
         content: "";
-        width: 100%;
-        top: 0;
-        left: 0;
-        height: 100%;
-        /* background-image: linear-gradient(to left, rgb(197, 0, 0), yellow); */
-        /* border-radius: 50%; */
-        /* border: 17px; */
-        /* animation: spinner1 linear 10s infinite; */
-        /* z-index: 2; */
-        /* transition: all 7s ease-in-out; */
-      }
-     
+        width: 46rem;
+        height: 46rem;
+        margin: -11rem -11rem;
+        border-radius: 50%;
+  /* border-top-radius: 50%; */
+  /* \* border-bottom-right-radius: 50%; */ 
+  
+  border-top: 1.5rem solid #3498db00; /* color the head of the spinner */
+  
+  
+  animation: spinner1 2.5s linear infinite; /* add a spinning animation */
+}
+    
       @keyframes spinner1 {
         0% {
           transform: rotate(0deg);
-          border-left: rgb(78, 0, 146) 17px solid;
+          /* border-left: rgb(78, 0, 146) 23px solid; */
            box-shadow:  0 0 5px 5px rgb(160, 243, 186), inset 0 0 5px 5px rgb(169, 251, 195); 
            /* opacity: 0.5; */
             }
         50% {
           transform: rotate(180deg);
           /* background: rgb(30, 106, 165); */
-          border-left: rgb(178, 11, 255) 17px solid;
+          /* border-left: rgb(178, 11, 255) 23px solid; */
       box-shadow:  0px 0px 12px 12px rgb(94, 21010, 72), inset 0 0 10px 10px rgb(94, 255, 72); 
             /* opacity: 1; */
         }
         100% {
           transform: rotate(360deg);
-          border-left: rgb(78, 0, 146) 17px solid;
+          /* border-left: rgb(78, 0, 146) 23px solid; */
           box-shadow:  0 0 5px 5px rgb(160, 243, 186), inset 0 0 5px 5px rgb(169, 251, 195); 
           /* opacity: 0.5; */
         }
@@ -115,69 +117,142 @@
       
 
        .spinner2 {
+        margin: -4rem 4rem;
         position: absolute;
-        width: 270px;
-        height: 270px;
+        width: 15rem;
+        height: 15rem;
+        margin: 4.5rem 4.5rem;
         background-color: rgba(0, 0, 0, 0);
-        
         border-radius: 50%;
         border: 20px solid rgba(255, 255, 255, 0);
-        overflow: hidden;
-        animation: spinner2 3.8s infinite linear;
+        /* overflow: hidden; */
+        animation: spinner2 3.5s infinite linear;
       }
 
-       .spinner2::after {
+       .spinner2::before {
         position: absolute;
         content: "";
-        width: 100%;
-        height: 100%;
-        top: 0px;
-        left: 0px;
          /* background-image: linear-gradient(to left, rgb(38, 238, 198), rgb(4, 53, 49)); */
         /* background-image: linear-gradient(to left, rgb(197, 0, 0), yellow); */
-        border-radius: 50%;
+        /* /* border-radius: 50%; */
+        /* animation: spinner2 4s infinite linear; */
         z-index: -2;
-      }
+      } 
 
 
 
 @keyframes spinner2 {
   0% {
-          border-left: rgb(78, 0, 146) 20px solid;
-    transform: rotate(360deg) translateX(0);
-               box-shadow:  0 0 5px 5px rgb(160, 243, 186), inset 0 0 5px 5px rgb(169, 251, 195); 
-        opacity: 0;
+        border-top: rgb(255, 6, 151) 20px solid;
+        border-bottom: rgb(255, 6, 151) 20px solid;
+        transform: rotate(0deg) ;
+        box-shadow:  0 0 5px 5px rgb(160, 243, 186), inset 0 0 5px 5px rgb(169, 251, 195); 
+        opacity: 0.3;
+  }
+
+  25% {
+        border-bottom: rgb(255, 6, 151) 20px solid;
+        border-top: rgb(255, 6, 151) 20px solid;
+
+            
+        transform: rotate(450deg);
+        box-shadow:  0 0 5px 5px rgb(160, 243, 186), inset 0 0 5px 5px rgb(169, 251, 195); 
+        opacity: 0.5;
   }
 
  
 
   50% {
-    transform: rotate(180deg);
-          border-left: rgb(178, 11, 255) 20px solid;
+        transform: rotate(2000deg);
+        border-left: rgb(255, 6, 151) 20px solid;
+        border-top: rgb(255, 6, 151) 20px solid;
+        border-right: rgb(255, 6, 151) 20px solid;
+        border-bottom: rgb(255, 6, 151) 20px solid;
     /* transform: rotate(360deg) scale(50%,50%); */
           box-shadow:  0px 0px 15px 15px rgb(94, 255, 72), inset 0 0 10px 10px rgb(94, 255, 72); 
         opacity: 1;
+  }
+  75% {
+    transform: rotate(-1000deg);
+         border-left: rgb(255, 6, 151) 20px solid;
+        border-top: rgb(255, 6, 151) 20px solid;
+        border-right: rgb(255, 6, 151) 20px solid;
+
+    /* transform: rotate(360deg) scale(50%,50%); */
+          box-shadow:  0px 0px 15px 15px rgb(94, 255, 72), inset 0 0 10px 10px rgb(94, 255, 72); 
+        opacity: 0.5;
+  }
+
+
+  100% {
+    transform: rotate(-540deg);
+        border-top: rgb(255, 6, 151) 20px solid;
+         border-bottom: rgb(255, 6, 151) 20px solid;
+
+    /* transform: rotate(360deg) scale(0%,0%); */
+              box-shadow:  0 0 5px 5px rgb(160, 243, 186), inset 0 0 5px 5px rgb(169, 251, 195); 
+        opacity: 0.3;
+  }
+}
+      
+
+
+       .spinner3 {
+        position: relative;
+        margin-top: 50em;
+        width: 50px;
+        height: 50px;
+        background-color: rgba(233, 45, 11);
+        border-radius: 50%;
+        border: 20px solid transparent;
+        overflow: hidden;
+        animation: spinner3 2s infinite linear;
+      }
+
+      /* .spinner3::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        top: -20em;
+        left: -20em;
+        border-radius: 50%;
+        z-index: -2;
+        border: 5px solid sandybrown;
+      } */
+
+
+
+@keyframes spinner3 {
+  0% {
+    transform: translateX(-300px);
+  }
+
+ 
+
+  50% {
+    transform: translateX(0%);
   }
 
   
 
 
   100% {
-    transform: rotate(0);
-          border-left: rgb(78, 0, 146) 20px solid;
-    /* transform: rotate(360deg) scale(0%,0%); */
-              box-shadow:  0 0 5px 5px rgb(160, 243, 186), inset 0 0 5px 5px rgb(169, 251, 195); 
-        opacity: 0;
+    transform: translateX(100%);
   }
 }
+      
+
     </style>
   </head>
   <body>
+    <div class="container">
     <div class="spinner1"></div>
     <div class="spinner2"></div>
+        </div>
 
-    <!-- 
+    
         <div class="spinner3"></div>
-        <div class="spinner4"></div> -->
+        <div class="spinner4"></div>
   </body>
 </html>
