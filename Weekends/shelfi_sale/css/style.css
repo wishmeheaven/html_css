@@ -54,11 +54,11 @@
   height: auto;
 } */
 
-/* input, 
+input, 
 button,
 textarea {
- font: inherit;
-}  */
+ font-family: var(--FF);
+} 
 
 /* || VARIABLES*/
 
@@ -87,7 +87,7 @@ textarea {
     /* --MARGIN: clamp(1em, 2.5vh, 1.5em) 0; */
 
     /* FOR TESTS PURPOSE BORDER */ 
-    --TEST-BORDER: 1px solid rgb(255, 0, 0);
+    --TEST-BORDER: 1px solid rgba(255, 0, 0, 0);
 }
 
 
@@ -113,6 +113,8 @@ html {
   /* scroll-behavior: smooth; */
   /* font-size: var(--FS); */
   font-family: var(--FF);
+  color: var(--HEADER-COLOR);
+
   /* background-color: (var(--BGCOLOR)); */
   /* background-image: (var(--BGIMAGE)); */
 }
@@ -127,11 +129,12 @@ body {
 
 header {
   /* border: 5px solid green; */
+  position: 0;
   margin: 0;
   height: 10vh;
   width: 100%;
   background-color: #000;
-  border: 2px solid red;
+  border: var(--TEST-BORDER);
   position: fixed;
 }
 .header__h1 {
@@ -280,7 +283,6 @@ nav ul {
   display: flex;
   align-items: center;
   flex-flow: column nowrap;
-
 }
 nav li {
   /* padding: var(--PADDING-TB);
@@ -290,11 +292,11 @@ nav li {
     
 }
 
-nav a {
+nav a  {
   /* display: block; */
   /* text-align: center; */
   width: 35%;
-  padding: .2em 3em;
+  padding: .4em 4em;
   margin: auto;
   text-decoration: none;
   color: var(--HEADER-COLOR);
@@ -324,24 +326,22 @@ nav a:focus {
     height: auto;
 } */
 
-#showcase{
+#welcome{
   /* margin: 3vh; */
   height: 100vh;
-  /* width: 100%;
-  height: 100%;  */
+ width: 100%;
+  /* height: 100%;  */
   
   box-shadow: inset 0 0 3em 2em;
-  position: relative;
-  z-index: -2; 
+  /* position: relative; */
+  /* z-index: 2;  */
   overflow: hidden;
   }
-/* Showcase */
-#showcase::after {
-    /* background: url('../img/showcase.jpg') no-repeat center center/cover; */
-    /* background-color: #0ef; */
+/* welcome */
+#welcome::after {
     height: 600px;
     background: url("../img/shelfi_storage3264x2448.jpeg") no-repeat center center/cover;
-    filter: grayscale(100%) opacity(50%);
+    filter: grayscale(100%) opacity(40%);
     content: "";
     position: absolute;
     top: 0;
@@ -349,22 +349,25 @@ nav a:focus {
     width: 100%;
     height: 100%;
     z-index: -2;
-
-  
 }
 
-#showcase .showcase-content {
+#welcome .welcome-content {
     color: #fff;
     text-align: center;
     padding-top: 170px;
+     min-width: fit-content;
 }
 
-#showcase .showcase-content h1 {
+#welcome .welcome-content h1 {
     font-size: 4em;
     line-height: 1.2em;
 }
+#welcome .welcome-content h2 {
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
 
-.showcase-content{
+.welcome-content{
   margin-top: 18vh;
 }
 .text-primary {
@@ -372,21 +375,111 @@ nav a:focus {
 }
 .lead {
   margin-top: 2vh;
+  padding: .25em;
 }
-.lead a:link, .lead a:visited {
+#welcome a{
+  font-size: 1.3em;
   text-decoration: none;
   color: var(--FONT-COLOR);
   cursor: pointer;
+} 
+
+.l-heading{
+  font-size: 3em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: .5em;
+  text-align: center;
 }
 
+#contact-form {
+  /* position: 0; */
+    /* border: 1px solid red; */
+  text-align: start;  /* position: absolute; */
+  width: 100%;
+  height: 100%;
+  /* position: absolute; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* margin-top: 50%; */
+}
 
+#contact-form p {
+  font-size: 2em;
+  margin-bottom:1em;
+}
+#contact-form label {
+  font-size: 1.em;
+  margin-bottom:1em;
+}
+
+#contact-form input{
+  margin: 1em;
+  width: 90%;
+  height: 100%;
+  /* display: flex;
+  /* flex-direction: column;
+  justify-content: center; */ */
+}
+
+/* .contact-form {
+  padding: 3em;
+  box-shadow: inset 0 0 3em 2em;
+  overflow: hidden;
+  } */
+
+  
+#contact-form{
+  height: 100vh;
+  /* width: 100vh; */
+  /* box-shadow: inset 0 0 3em 2em; */
+  /* overflow: visible; */
+  /* text-align: start; */
+  }
+
+#contact-form input, #contact-form textarea{
+  border: 3px solid var(--FONT-COLOR);
+  background-color: var(--BGCOLOR);
+  height: 3em;
+  border-radius: 15px;
+  padding: 1em;
+  overflow: visible;
+  }
+ #contact-form button {
+  margin: 1em;
+  /* border: 5px solid var(--FONT-COLOR); */
+  background-color: var(--BGCOLOR);
+  height: 3em;
+  border-radius: 15px;
+  padding: 1em;
+  overflow: visible;
+ }
+/* Showcase */
+#contact-form::after {
+    height: 600px;
+    background: url("../img/dice-hand_5272x3515.jpeg") no-repeat center center/cover;
+    filter: grayscale(800%) opacity(60%);
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    border: 1px solid rgb(0, 217, 255);
+}
 
 /* || FOOTER */
 
-/* .footer {
-    position: sticky;
+.footer {
+  font-size: .7em;
+    position: fixed;
+    margin: auto;
     bottom: 0;
     background-color: var(--HEADER-BGCOLOR);
     color: var(--HEADER-COLOR);
     text-align: center;
-} */
+} 

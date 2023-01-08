@@ -9,36 +9,84 @@
     <title>Contact Us</title>
 </head>
 <body>
-    <header class="header"></header>
-      <h1>Contact US</h1>
-          <nav class=".header__nav">
-            <ul class="header__ul">
-              <li>
-                <a href="/">Home</a>
-              </li>
-              <li>
-                <a href="#menu">Menu</a>
-              </li>
-              <li>
-                <a href="gallery.html">Gallery</a>
-              </li>
-              <li>
-                <a href="about.html">Contact</a>
-              </li>
-            </ul>
-          </nav>
-</header>
-          <section class="hero">
-          <figure>
-            <img    
-              src="img/dice-hand.jpg"
-              alt="Your dice are in good hands"
-              title="We love board games!"
-              width="5272"
-              height="3515"
-            />
-            <figcaption class="offscreen">Your dice are in good hands</figcaption>
-          </figure>
-          </section>
+
+ <header>
+      <!-- ICON FOR HEADER -->
+      <section class="header-title-line">
+        <h1 class="header__h1">
+          <i class="fa-solid fa-dice fa-x2"> </i> ShelfiZ
+        </h1>
+
+        <button class="menu-button">
+          <div class="menu-icon"></div>
+        </button>
+      </section>
+      <!--  -->
+
+      <nav class="header__nav">
+        <ul class="header__ul">
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="gallery.html">Gallery</a>
+          </li>
+          <li>
+            <a href="about.html">About</a>
+        </li>
+        </ul>
+      </nav>
+          </header>
+      
+ 
+    <section id="contact-form" class="py-3">
+      <div class="container">
+        <h1 class="l-heading"><span
+           class="text-primary">Contact </span>Us</h1>
+        <p>What is in your mind?</p>
+        <form action="process.php">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email">
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea name="message" 
+            id="message"></textarea>
+          </div>
+          <button type="submit" class="btn">Submit</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- <section id="contact-info" class="bg-dark">
+      <div class="container">
+         <div class="box">
+        <i class="fa-solid fa-hotel fa-3x"></i>
+        <h3>Location</h3>
+        <p>50 Main sr, Boston MA</p>
+      </div>
+      <div class="box">
+        <i class="fas fa-phone fa-3x"></i>
+        <h3>Phone Number</h3>
+        <p>(001) 555-5555 </p>
+      </div>
+      <div class="box">
+        <i class="fas fa-envelope fa-3x"></i>
+        <h3>Email Address</h3>
+        <p>frontdesk@hotelbt.co</p>
+      </div>
+      </div>
+    </section> -->
+       <footer class="footer">
+        <p>
+            <span class="nowrap">Copyright &copy; <time id="year">2023</time></span>
+            <span class="nowrap">Shelfie Sale</span>
+        </p>
+    </footer>
 </body>
 </html>
